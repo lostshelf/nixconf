@@ -33,6 +33,7 @@
       kile
       kid3-kde
     ];
+
     kpkgs = with pkgs.kdePackages; [
       discover
       kcalc
