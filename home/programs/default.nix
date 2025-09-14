@@ -12,6 +12,7 @@
     ./gaming.nix # Gaming related programs
   ];
 
+  # Random miscellaneous packages I want
   home.packages = with pkgs; [
     zip
     unzip
