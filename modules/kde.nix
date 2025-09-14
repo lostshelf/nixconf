@@ -22,6 +22,8 @@
 
   security.pam.services.kdewallet.enable = true;
 
+  programs.kdeconnect.enable = true;
+
   environment.systemPackages = let
     npkgs = with pkgs; [
       kdiff3
