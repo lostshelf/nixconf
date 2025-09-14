@@ -32,7 +32,7 @@
       powerManagement.enable = false;
       powerManagement.finegrained = false;
       open = true;
-      package = config.boot.kernelPackages.nvidiaPackages.production;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
     xpadneo.enable = true;
     bluetooth.enable = true;
@@ -42,7 +42,6 @@
 
   programs.atop.atopgpu.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-
 
   networking = {
     hostName = "pc";

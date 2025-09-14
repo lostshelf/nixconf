@@ -17,7 +17,7 @@
     initrd.systemd.enable = true;
     consoleLogLevel = 0;
     kernelParams = [ "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "udev.log_priority=0" "amd_pstate=active" ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
   };
 
   hardware = {
@@ -25,13 +25,11 @@
     firmware = with pkgs; [ linux-firmware ];
   };
 
-  networking.networkmanager.enable = true;
-
   virtualisation.docker.enable = true;
 
   nix = {
     settings = {
-      trusted-users = [username];
+      trusted-users = [ username ];
       experimental-features = ["nix-command" "flakes"];
     };
 
@@ -43,7 +41,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
 
   time.timeZone = "America/Edmonton";
   i18n.defaultLocale = "en_CA.UTF-8";
@@ -107,7 +104,9 @@
   programs = {
     fish.enable = true;
     ssh.startAgent = true;
-    nix-ld.enable = true;
+    nix-ld = {
+      enable = true;
+    };
     command-not-found.enable = false;
   };
 

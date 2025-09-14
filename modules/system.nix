@@ -1,4 +1,4 @@
-{ pkgs, lib, username, config, ...}: {
+{ pkgs, lib, unstable, username, config, ...}: {
   boot.plymouth.enable = true;
 
   users.users.danif = {
