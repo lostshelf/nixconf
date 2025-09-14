@@ -16,7 +16,7 @@
     nasm
     go
     (lib.hiPrio gcc)
-    (lib.lowPrio binutils)
+    (lib.lowPrio clang)
     toybox
     gnumake
     cmake
