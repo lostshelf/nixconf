@@ -8,11 +8,12 @@
   ...
 }: {
   imports = [
-    ../../modules/system.nix
-    ../../modules/kde.nix
-
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
+    ../../modules/common.nix
+    ../../modules/system.nix
+    ../../modules/kde.nix
   ];
 
   services.udev.extraRules = ''
@@ -62,6 +63,4 @@
     dates = "08:00";
     randomizedDelaySec = "45min";
   };
-
-  system.stateVersion = "25.05";
 }
