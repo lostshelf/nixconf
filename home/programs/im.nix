@@ -5,5 +5,6 @@
     vesktop
     zoom-us
     vesktop
+    hexchat
   ];
 }
