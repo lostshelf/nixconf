@@ -1,8 +1,9 @@
-{ libs, pkgs, unstable, ... }: {
+{ lib, pkgs, unstable, ... }: {
   home.packages = with unstable; [
     rizin
     cutter
-    cutterPlugins.rz-ghidra
+    (lib.hiPrio cutterPlugins.rz-ghidra)
+    (lib.lowPrio rizinPlugins.rz-ghidra)
     frida-tools
     android-tools
     apktool
