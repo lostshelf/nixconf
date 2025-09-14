@@ -8,6 +8,9 @@
     vlc
     ffmpeg
     dvgrab
+    rustdesk
+    protonmail-bridge-gui
+    virt-manager
   ];
 
   programs = {

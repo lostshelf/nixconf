@@ -5,5 +5,9 @@
     blender
     gimp
     godot
+    graphviz
+    insomnia
+    libnotify
+    wineWowPackages.wayland
   ];
 }

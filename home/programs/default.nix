@@ -11,28 +11,4 @@
     ./design.nix # All media creation related programs (blender, CAD tools, etc.)
     ./gaming.nix # Gaming related programs
   ];
-
-  # Random miscellaneous packages I want
-  home.packages = with pkgs; [
-    zip
-    unzip
-    p7zip
-    ripgrep
-    htop
-    libnotify
-    wineWowPackages.wayland
-    graphviz
-    insomnia
-    rustdesk
-    protonmail-bridge-gui
-    qbittorrent-enhanced
-    deluge
-    virt-manager
-    hollywood
-    fastfetch
-    figlet
-    rclone
-    fzf
-    cmatrix
-  ];
 }
