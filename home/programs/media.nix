@@ -1,0 +1,22 @@
+{
+  pkgs,
+  config,
+  ...
+}: {
+  home.packages = with pkgs; [
+    spotify
+    vlc
+    ffmpeg
+    dvgrab
+  ];
+
+  programs = {
+    mpv = {
+      enable = true;
+      defaultProfiles = ["gpu-hq"];
+      scripts = [pkgs.mpvScripts.mpris];
+    };
+
+    obs-studio.enable = true;
+  };
+}
