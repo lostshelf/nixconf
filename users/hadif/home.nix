@@ -7,6 +7,6 @@
 
   programs.git = {
     userName = "Hadi Faraz";
-    userEmail = "hadifaraz52@proton.me";
+    userEmail = "hadifaraz52@protonmail.com";
   };
 }
