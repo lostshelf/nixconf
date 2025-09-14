@@ -49,6 +49,20 @@
               }
             ];
           };
+    "server" = let
+      username = "hadif";
+      system = "x86_64-linux";
+      specialArgs = { inherit username; inherit system; inherit copyparty; };
+    in
+      nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+
+        modules = [
+          ./hosts/server
+
+          ./users/${username}/nixos.nix
+        ];
+      }
     };
   };
 }

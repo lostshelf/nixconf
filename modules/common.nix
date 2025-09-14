@@ -92,6 +92,7 @@
     busybox
     sysstat
     lm_sensors
+    fish
   ];
 
   environment.variables.EDITOR = "nvim";
