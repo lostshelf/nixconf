@@ -108,7 +108,7 @@
       plasma-activities
       plasma-activities-stats
       kactivitymanagerd
-      kamoso
+      kamera
     ];
   in
     npkgs ++ kpkgs;
