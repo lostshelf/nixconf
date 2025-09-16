@@ -5,5 +5,6 @@
     lutris
     protonup-qt
     gamescope
+    r2modman
   ];
 }

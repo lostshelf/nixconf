@@ -25,6 +25,7 @@
     fishPlugins.tide
     xdg-utils
     flatpak
+    pinentry-qt
   ];
 
   security.rtkit.enable = true;
@@ -56,6 +57,10 @@
         proton-ge-bin
       ];
       protontricks.enable = true;
+    };
+    gnupg.agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-qt;
     };
   };
 
