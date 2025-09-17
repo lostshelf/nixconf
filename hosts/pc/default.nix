@@ -32,7 +32,7 @@
       powerManagement.enable = false;
       powerManagement.finegrained = false;
       open = true;
-      package = config.boot.kernelPackages.nvidiaPackages.latest;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
     xpadneo.enable = true;
     bluetooth.enable = true;
