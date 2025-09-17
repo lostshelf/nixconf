@@ -33,10 +33,13 @@
       wl-clipboard
       krename
       kile
+      ffmpegthumbnailer
       kid3-kde
     ];
 
     kpkgs = with pkgs.kdePackages; [
+      dolpin-plugins
+      kdegraphics-thumbnailers
       discover
       kcalc
       kcharselect
@@ -53,6 +56,8 @@
       kde-gtk-config
       wacomtablet
       ark
+      audiocd-kio
+      kdenetwork-filesharing
       kio
       kio-extras
       kio-admin
@@ -80,10 +85,15 @@
       krfb
       krdc
       kpipewire
+      kqtquickcharts
       kpat
       konqueror
+      ksystemstats
+      kquickcharts
       kompare
+      qt6gtk2
       kmplot
+      kdegraphics-mobipocket
       kmousetool
       kmines
       kmail
@@ -93,7 +103,8 @@
       kget
       kfind
       kdevelop
-      kdenetwork-filesharing
+      wallpaper-engine-plugin
+      kdesdk-thumbnailers
       kdeconnect-kde
       kamera
       kalgebra
@@ -107,6 +118,7 @@
       plasma-vault
       plasma-activities
       plasma-activities-stats
+      plasma-integration
       kactivitymanagerd
       kamera
     ];
