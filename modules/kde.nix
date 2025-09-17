@@ -38,7 +38,7 @@
     ];
 
     kpkgs = with pkgs.kdePackages; [
-      dolpin-plugins
+      dolphin-plugins
       kdegraphics-thumbnailers
       discover
       kcalc
@@ -85,7 +85,6 @@
       krfb
       krdc
       kpipewire
-      kqtquickcharts
       kpat
       konqueror
       ksystemstats
