@@ -53,6 +53,9 @@
       plasma-firewall
       kwallet-pam
       flatpak-kcm
+      akregator
+      kbackup
+      kmag
       kde-gtk-config
       wacomtablet
       ark
@@ -60,6 +63,7 @@
       kdenetwork-filesharing
       kio
       kio-extras
+      kclock
       kio-admin
       kio-gdrive
       keditbookmarks
@@ -67,6 +71,7 @@
       kwallet-pam
       kinfocenter
       plasma-browser-integration
+      neochat
       colord-kde
       krohnkite
       ksystemlog
@@ -77,6 +82,7 @@
       plasma-disks
       kwave
       kunitconversion
+      konversation
       kup
       ktorrent
       ksshaskpass
