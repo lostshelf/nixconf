@@ -71,7 +71,7 @@
       kwallet-pam
       kinfocenter
       plasma-browser-integration
-      neochat
+      # neochat
       colord-kde
       krohnkite
       ksystemlog
