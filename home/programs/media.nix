@@ -11,6 +11,7 @@
     rustdesk
     protonmail-bridge-gui
     virt-manager
+    scrcpy
   ];
 
   programs = {
