@@ -21,6 +21,7 @@
     gnumake
     cmake
     ninja
+    gnum4
   ];
 
   programs = {

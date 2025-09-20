@@ -33,5 +33,7 @@
     procyon
     _010editor
     wxhexeditor
+    valgrind
+    yara
   ];
 }

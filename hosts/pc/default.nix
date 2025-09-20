@@ -40,6 +40,8 @@
     steam-hardware.enable = true;
   };
 
+  fonts.fontconfig.antialias = true;
+
   programs.atop.atopgpu.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
