@@ -26,6 +26,7 @@
     bluetooth.enable = true;
     xpadneo.enable = true;
     logitech.wireless.enable = true;
+    firmware = [ pkgs.sof-firmware ];
   };
 
   boot = {
@@ -38,6 +39,7 @@
       "intel_idle.max_cstate=1"
       "nowatchdog"
       "nosoftlockup"
+      "snd_hda_intel.model=alc1318-dell-headset-multi"
     ];
   };
 
@@ -45,6 +47,7 @@
 
   environment.systemPackages = with unstable; [
     fw-fanctrl
+    alsa-ucm-conf
   ];
 
   programs = {
