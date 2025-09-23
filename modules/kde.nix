@@ -35,6 +35,7 @@
       kile
       ffmpegthumbnailer
       kid3-kde
+      qt6.qttools
     ];
 
     kpkgs = with pkgs.kdePackages; [

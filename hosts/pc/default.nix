@@ -32,12 +32,16 @@
       powerManagement.enable = false;
       powerManagement.finegrained = false;
       open = true;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
     };
     xpadneo.enable = true;
     bluetooth.enable = true;
     logitech.wireless.enable = true;
     steam-hardware.enable = true;
+  };
+
+  environment.sessionVariables = {
+    KWIN_OPENGL_INTERFACE = "egl_gles";
   };
 
   fonts.fontconfig.antialias = true;
