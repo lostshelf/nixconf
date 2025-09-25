@@ -12,6 +12,7 @@
       enable = true;
       enable32Bit = true;
     };
+    steam-hardware.enable = true;
   };
 
   virtualisation = {
@@ -53,6 +54,10 @@
       nssmdns4 = true;
       openFirewall = true;
     };
+    joycond.enable = true;
+    udev.packages = with pkgs; [
+      game-devices-udev-rules
+    ];
   };
 
   programs = {
