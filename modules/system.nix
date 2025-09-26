@@ -75,6 +75,11 @@
       enable = true;
       pinentryPackage = pkgs.pinentry-qt;
     };
+    ssh = {
+      startAgent = true;
+      enableAskPassword = true;
+      askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
+    };
   };
 
   system.autoUpgrade = {
