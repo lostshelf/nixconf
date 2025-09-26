@@ -18,6 +18,8 @@
 
   environment.sessionVariables = {
     GTK_USE_PORTAL = "1";
+    SSH_ASKPASS = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
+    SSH_ASKPASS_REQUIRE = "prefer";
   };
 
   security.pam.services.kdewallet.enable = true;
