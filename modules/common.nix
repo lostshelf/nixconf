@@ -106,6 +106,7 @@
       enable = true;
     };
     command-not-found.enable = false;
+    ssh.startAgent = true;
   };
 
   system.stateVersion = "25.05";
