@@ -28,13 +28,18 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    firefox
-    fishPlugins.tide
-    xdg-utils
-    flatpak
-    pinentry-qt
-  ];
+  environment = {
+    variables = {
+
+    };
+    systemPackages = with pkgs; [
+      firefox
+      fishPlugins.tide
+      xdg-utils
+      flatpak
+      pinentry-qt
+    ];
+  };
 
   security.rtkit.enable = true;
 
@@ -81,6 +86,8 @@
       askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
     };
   };
+
+  nixpkgs.config.android_sdk.accept_license = true;
 
   system.autoUpgrade = {
     enable = true;

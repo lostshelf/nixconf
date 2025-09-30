@@ -38,6 +38,10 @@
       ffmpegthumbnailer
       kid3-kde
       qt6.qttools
+      jetbrains-runner
+      krunner-translator
+      krunner-vscodeprojects
+      vscode-runner
     ];
 
     kpkgs = with pkgs.kdePackages; [
@@ -129,10 +133,6 @@
       plasma-integration
       kactivitymanagerd
       kamera
-      jetbrains-runner
-      krunner-translator
-      krunner-vscodeprojects
-      vscode-runner
     ];
   in
     npkgs ++ kpkgs;
