@@ -129,6 +129,10 @@
       plasma-integration
       kactivitymanagerd
       kamera
+      jetbrains-runner
+      krunner-translator
+      krunner-vscodeprojects
+      vscode-runner
     ];
   in
     npkgs ++ kpkgs;
