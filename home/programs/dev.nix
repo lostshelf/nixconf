@@ -42,7 +42,7 @@
       gnum4
       android-studio-full
       android-studio-tools
-    ]
+    ];
   in
     dev_pkgs++ jetbrain_ides;
 
