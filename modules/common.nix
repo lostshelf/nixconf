@@ -77,6 +77,7 @@
     curl
     git
     gnupg
+    bash
     openssh
     pciutils
     usbutils
