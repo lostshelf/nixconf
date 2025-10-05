@@ -21,6 +21,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    egl-wayland
     solaar
   ];
 
@@ -31,7 +32,7 @@
       modesetting.enable = true;
       powerManagement.enable = false;
       powerManagement.finegrained = false;
-      open = true;
+      open = false;
       package = config.boot.kernelPackages.nvidiaPackages.production;
     };
     xpadneo.enable = true;

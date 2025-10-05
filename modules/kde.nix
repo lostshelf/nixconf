@@ -57,8 +57,6 @@
       kwallet-pam
       flatpak-kcm
       akregator
-      kbackup
-      kmag
       kde-gtk-config
       wacomtablet
       ark
@@ -85,9 +83,6 @@
       plasma-disks
       kwave
       kunitconversion
-      konversation
-      kup
-      ktorrent
       ksshaskpass
       krunner
       kruler
@@ -95,16 +90,13 @@
       krdc
       kpipewire
       kpat
-      konqueror
       ksystemstats
       kquickcharts
       kompare
       qt6gtk2
-      kmplot
       kdegraphics-mobipocket
       kmousetool
       kmines
-      kmail
       kio-zeroconf
       kio-fuse
       kgpg
@@ -115,7 +107,6 @@
       kdesdk-thumbnailers
       kdeconnect-kde
       kamera
-      kalgebra
       kalarm
       kactivitymanagerd
       kaccounts-integration
