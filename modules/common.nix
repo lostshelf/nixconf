@@ -71,28 +71,43 @@
     firewall.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    neovim
-    wget
-    curl
-    git
-    gnupg
-    bash
-    openssh
-    pciutils
-    usbutils
-    dmidecode
-    killall
-    docker
-    tmux
-    toybox
-    busybox
-    sysstat
-    lm_sensors
-    fish
-  ];
-
-  environment.variables.EDITOR = "nvim";
+  environment = {
+    systemPackages = with pkgs; [
+      neovim
+      wget
+      curl
+      git
+      gnupg
+      bash
+      openssh
+      pciutils
+      usbutils
+      dmidecode
+      killall
+      docker
+      tmux
+      toybox
+      busybox
+      sysstat
+      lm_sensors
+      fish
+      distrobox
+      podman
+      docker
+      skopeo
+      containers-common
+    ];
+    variables.EDITOR = "nvim";
+    etc."containers/policy.json".text = ''
+      {
+        "default": [
+          {
+            "type": "insecureAcceptAnything"
+          }
+        ]
+      }
+    '';
+  };
 
   services = {
     printing.enable = true;

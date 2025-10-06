@@ -7,7 +7,7 @@
       description = "Daniyal Faraz";
       hashedPassword = "$6$xJTUGzkqNfZKjW7O$csMz3bFAgNs7nvTzVWF/vyvvz9RdtSiNzTAgIx18ZR5V1XnFQtW/j2y6ekj.YF3niqwNis.IgS7HpBdVZCGu8.";
     };
-    groups.libvirtd.members = [ "hadif" ]
+    groups.libvirtd.members = [ "hadif" ];
   };
 
   hardware = {
