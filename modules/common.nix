@@ -48,7 +48,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "Hadi Faraz";
-    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render"];
+    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render" "libvirtd"];
   };
 
   fonts = {

@@ -18,5 +18,12 @@
     stateVersion = "25.05";
   };
 
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
+  };
+
   programs.home-manager.enable = true;
 }
