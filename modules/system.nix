@@ -64,9 +64,15 @@
       openFirewall = true;
     };
     joycond.enable = true;
-    udev.packages = with pkgs; [
-      game-devices-udev-rules
-    ];
+    udev = {
+      packages = with pkgs; [
+        game-devices-udev-rules
+      ];
+      extraRules = ''
+        KERNEL=="card*", SUBSYSTEM=="drm", GROUP="video", MODE="0660"
+        KERNEL=="renderD*",SUBSYSTEM=="drm", GROUP="video", MODE="0660"
+      '';
+    };
   };
 
   programs = {
