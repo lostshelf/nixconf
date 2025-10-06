@@ -25,7 +25,13 @@
     firmware = with pkgs; [ linux-firmware ];
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    docker.enable = true;
+    podman = {
+      enable = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
 
   nix = {
     settings = {
@@ -95,7 +101,6 @@
       podman
       docker
       skopeo
-      containers-common
     ];
     variables.EDITOR = "nvim";
     etc."containers/policy.json".text = ''
