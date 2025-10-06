@@ -1,10 +1,13 @@
 { pkgs, lib, unstable, username, config, ...}: {
   boot.plymouth.enable = true;
 
-  users.users.danif = {
-    isNormalUser = true;
-    description = "Daniyal Faraz";
-    hashedPassword = "$6$xJTUGzkqNfZKjW7O$csMz3bFAgNs7nvTzVWF/vyvvz9RdtSiNzTAgIx18ZR5V1XnFQtW/j2y6ekj.YF3niqwNis.IgS7HpBdVZCGu8.";
+  users = {
+    users.danif = {
+      isNormalUser = true;
+      description = "Daniyal Faraz";
+      hashedPassword = "$6$xJTUGzkqNfZKjW7O$csMz3bFAgNs7nvTzVWF/vyvvz9RdtSiNzTAgIx18ZR5V1XnFQtW/j2y6ekj.YF3niqwNis.IgS7HpBdVZCGu8.";
+    };
+    groups.libvirtd.members = [ "hadif" ]
   };
 
   hardware = {
@@ -16,6 +19,7 @@
   };
 
   virtualisation = {
+    spiceUSBRedirection.enable = true;
     libvirtd = {
       enable = true;
       qemu = {

@@ -42,6 +42,8 @@
       krunner-translator
       krunner-vscodeprojects
       vscode-runner
+      libappindicator
+      libappindicator-gtk3
     ];
 
     kpkgs = with pkgs.kdePackages; [
