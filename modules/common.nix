@@ -103,15 +103,6 @@
       skopeo
     ];
     variables.EDITOR = "nvim";
-    etc."containers/policy.json".text = ''
-      {
-        "default": [
-          {
-            "type": "insecureAcceptAnything"
-          }
-        ]
-      }
-    '';
   };
 
   services = {
