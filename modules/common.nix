@@ -17,7 +17,7 @@
     initrd.systemd.enable = true;
     consoleLogLevel = 0;
     kernelParams = [ "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "udev.log_priority=0" "amd_pstate=active" ];
-    kernelPackages = pkgs.linuxPackages;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   hardware = {

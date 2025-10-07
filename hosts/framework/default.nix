@@ -27,6 +27,16 @@
     xpadneo.enable = true;
     logitech.wireless.enable = true;
     firmware = [ pkgs.sof-firmware ];
+    graphics = {
+      extraPackages = with pkgs; [
+        vaapiVdpau
+        libcdpau-va-gl
+      ];
+      extraPackages32 = with pkgs.pkgsi686Linux; [
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
+    };
   };
 
   boot = {
