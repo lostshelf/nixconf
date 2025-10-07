@@ -101,6 +101,7 @@
       podman
       docker
       skopeo
+      lshw
     ];
     variables.EDITOR = "nvim";
   };
