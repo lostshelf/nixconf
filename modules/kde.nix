@@ -38,6 +38,12 @@
       ffmpegthumbnailer
       kid3-kde
       qt6.qttools
+      jetbrains-runner
+      krunner-translator
+      krunner-vscodeprojects
+      vscode-runner
+      libappindicator
+      libappindicator-gtk3
     ];
 
     kpkgs = with pkgs.kdePackages; [

@@ -1,10 +1,13 @@
 { pkgs, lib, unstable, username, config, ...}: {
   boot.plymouth.enable = true;
 
-  users.users.danif = {
-    isNormalUser = true;
-    description = "Daniyal Faraz";
-    hashedPassword = "$6$xJTUGzkqNfZKjW7O$csMz3bFAgNs7nvTzVWF/vyvvz9RdtSiNzTAgIx18ZR5V1XnFQtW/j2y6ekj.YF3niqwNis.IgS7HpBdVZCGu8.";
+  users = {
+    users.danif = {
+      isNormalUser = true;
+      description = "Daniyal Faraz";
+      hashedPassword = "$6$xJTUGzkqNfZKjW7O$csMz3bFAgNs7nvTzVWF/vyvvz9RdtSiNzTAgIx18ZR5V1XnFQtW/j2y6ekj.YF3niqwNis.IgS7HpBdVZCGu8.";
+    };
+    groups.libvirtd.members = [ "hadif" ];
   };
 
   hardware = {
@@ -16,6 +19,7 @@
   };
 
   virtualisation = {
+    spiceUSBRedirection.enable = true;
     libvirtd = {
       enable = true;
       qemu = {
@@ -28,13 +32,18 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    firefox
-    fishPlugins.tide
-    xdg-utils
-    flatpak
-    pinentry-qt
-  ];
+  environment = {
+    variables = {
+
+    };
+    systemPackages = with pkgs; [
+      firefox
+      fishPlugins.tide
+      xdg-utils
+      flatpak
+      pinentry-qt
+    ];
+  };
 
   security.rtkit.enable = true;
 
@@ -55,9 +64,15 @@
       openFirewall = true;
     };
     joycond.enable = true;
-    udev.packages = with pkgs; [
-      game-devices-udev-rules
-    ];
+    udev = {
+      packages = with pkgs; [
+        game-devices-udev-rules
+      ];
+      extraRules = ''
+        KERNEL=="card*", SUBSYSTEM=="drm", GROUP="video", MODE="0660"
+        KERNEL=="renderD*",SUBSYSTEM=="drm", GROUP="video", MODE="0660"
+      '';
+    };
   };
 
   programs = {
@@ -81,6 +96,8 @@
       askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
     };
   };
+
+  nixpkgs.config.android_sdk.accept_license = true;
 
   system.autoUpgrade = {
     enable = true;

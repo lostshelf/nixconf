@@ -25,7 +25,13 @@
     firmware = with pkgs; [ linux-firmware ];
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    docker.enable = true;
+    podman = {
+      enable = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
 
   nix = {
     settings = {
@@ -48,7 +54,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "Hadi Faraz";
-    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render"];
+    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render" "libvirtd"];
   };
 
   fonts = {
@@ -71,27 +77,33 @@
     firewall.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    neovim
-    wget
-    curl
-    git
-    gnupg
-    openssh
-    pciutils
-    usbutils
-    dmidecode
-    killall
-    docker
-    tmux
-    toybox
-    busybox
-    sysstat
-    lm_sensors
-    fish
-  ];
-
-  environment.variables.EDITOR = "nvim";
+  environment = {
+    systemPackages = with pkgs; [
+      neovim
+      wget
+      curl
+      git
+      gnupg
+      bash
+      openssh
+      pciutils
+      usbutils
+      dmidecode
+      killall
+      docker
+      tmux
+      toybox
+      busybox
+      sysstat
+      lm_sensors
+      fish
+      distrobox
+      podman
+      docker
+      skopeo
+    ];
+    variables.EDITOR = "nvim";
+  };
 
   services = {
     printing.enable = true;

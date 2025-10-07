@@ -50,6 +50,11 @@
     alsa-ucm-conf
   ];
 
+  environment.sessionVariables = {
+    KWIN_OPENGL_INTERFACE = "egl_gles";
+  };
+
+
   programs = {
     fw-fanctrl = {
       enable = true;
