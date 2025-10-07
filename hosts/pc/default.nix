@@ -48,7 +48,10 @@
   fonts.fontconfig.antialias = true;
 
   programs.atop.atopgpu.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services = {
+    xserver.videoDrivers = [ "nvidia" ];
+    power-profiles-daemon.enable = true;
+  };
 
   networking = {
     hostName = "pc";

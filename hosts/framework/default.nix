@@ -18,8 +18,8 @@
   ];
 
   services = {
-    services.tlp.enable = true;
-    powerManagement.cpuFreqGovernor = "schedutil";
+    # Conflicts with value set in framework configuration from nixos-hardware. Apparently PPD works better than TLP on AMD
+    # tlp.enable = true;
     udev.extraRules = ''
       SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0012", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"
       SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0014", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"

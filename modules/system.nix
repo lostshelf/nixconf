@@ -49,7 +49,6 @@
 
   services = {
     flatpak.enable = true;
-    power-profiles-daemon.enable = true;
     upower.enable = true;
     pipewire = {
       enable = true;
