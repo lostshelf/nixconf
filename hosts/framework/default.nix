@@ -34,7 +34,7 @@
     graphics = {
       extraPackages = with pkgs; [
         vaapiVdpau
-        libcdpau-va-gl
+        libvdpau-va-gl
       ];
       extraPackages32 = with pkgs.pkgsi686Linux; [
         vaapiVdpau
