@@ -108,7 +108,7 @@
     ];
     variables = {
       EDITOR = "nvim";
-      NIXPKGS_ACCEPT_ANDROID_SDK_LICENSE = 1;
+      NIXPKGS_ACCEPT_ANDROID_SDK_LICENSE = "1";
     };
   };
 

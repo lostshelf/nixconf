@@ -40,8 +40,8 @@
       cmake
       ninja
       gnum4
-      android-studio-full
-      android-studio-tools
+      # android-studio-full
+      # android-studio-tools
     ];
   in
     dev_pkgs++ jetbrain_ides;
@@ -54,5 +54,9 @@
     vscode = {
       enable = true;
     };
+  };
+
+  home.sessionVariables = {
+    NIXPKGS_ACCEPT_ANDROID_SDK_LICENSE = "1";
   };
 }
