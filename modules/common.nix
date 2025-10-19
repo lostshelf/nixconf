@@ -46,7 +46,10 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+  };
 
   time.timeZone = "America/Edmonton";
   i18n.defaultLocale = "en_CA.UTF-8";
