@@ -44,6 +44,7 @@
       vscode-runner
       libappindicator
       libappindicator-gtk3
+      sqlite # required by vscode-runner
     ];
 
     kpkgs = with pkgs.kdePackages; [
