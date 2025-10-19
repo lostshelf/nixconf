@@ -1,5 +1,5 @@
-{ libs, pkgs, ... }: {
-  home.packages = with pkgs; [
+{ libs, pkgs, unstable, ... }: {
+  home.packages = with unstable; [
     telegram-desktop
     discord
     vesktop

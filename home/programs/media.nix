@@ -1,9 +1,10 @@
 {
   pkgs,
+  unstable,
   config,
   ...
 }: {
-  home.packages = with pkgs; [
+  home.packages = with unstable; [
     spotify
     vlc
     ffmpeg

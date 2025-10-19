@@ -1,6 +1,6 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, unstable, ... }: {
   home.packages = let
-    jetbrain_ides = with pkgs.jetbrains; [
+    jetbrain_ides = with unstable.jetbrains; [
       clion
       goland
       idea-ultimate
@@ -17,7 +17,7 @@
       datagrip
       aqua
     ];
-    dev_pkgs = with pkgs; [
+    dev_pkgs = with unstable; [
       docker
       kubectl
       distrobox
