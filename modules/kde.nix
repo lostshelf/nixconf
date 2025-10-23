@@ -27,7 +27,7 @@
   programs.kdeconnect.enable = true;
 
   environment.systemPackages = let
-    npkgs = with unstable; [
+    npkgs = with pkgs; [
       kdiff3
       hardinfo2
       isoimagewriter
@@ -39,7 +39,7 @@
       kid3-kde
       qt6.qttools
       jetbrains-runner
-      krunner-translator
+      # krunner-translator # Doesn't support plasma 6
       krunner-vscodeprojects
       vscode-runner
       libappindicator
@@ -47,7 +47,7 @@
       sqlite # required by vscode-runner
     ];
 
-    kpkgs = with unstable.kdePackages; [
+    kpkgs = with pkgs.kdePackages; [
       dolphin-plugins
       kdegraphics-thumbnailers
       discover
