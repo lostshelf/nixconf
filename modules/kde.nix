@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, unstable, ... }: {
   services = {
     displayManager = {
       sddm.enable = true;
@@ -27,7 +27,7 @@
   programs.kdeconnect.enable = true;
 
   environment.systemPackages = let
-    npkgs = with pkgs; [
+    npkgs = with unstable; [
       kdiff3
       hardinfo2
       isoimagewriter
@@ -47,7 +47,7 @@
       sqlite # required by vscode-runner
     ];
 
-    kpkgs = with pkgs.kdePackages; [
+    kpkgs = with unstable.kdePackages; [
       dolphin-plugins
       kdegraphics-thumbnailers
       discover
