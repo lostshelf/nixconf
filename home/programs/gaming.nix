@@ -1,10 +1,15 @@
 { libs, pkgs, unstable, ... }: {
-  home.packages = with unstable; [
-    prismlauncher
-    umu-launcher
-    lutris
-    protonup-qt
-    gamescope
-    r2modman
-  ];
+  home.packages = let
+    pkgs = with pkgs; [
+      prismlauncher
+    ];
+    upkgs = with unstable; [
+      umu-launcher
+      lutris
+      protonup-qt
+      gamescope
+      r2modman
+    ];
+  in
+    pkgs ++ upkgs;
 }
