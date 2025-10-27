@@ -2,6 +2,7 @@
     home.packages = let
       npkgs = with pkgs; [
         prismlauncher
+        lunar-client
       ];
       upkgs = with unstable; [
         umu-launcher
