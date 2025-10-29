@@ -97,16 +97,4 @@
   };
 
   nixpkgs.config.android_sdk.accept_license = true;
-
-  system.autoUpgrade = {
-    enable = true;
-    # flake = inputs.self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      # "-L" # Prints build logs
-    ];
-    dates = "08:00";
-    randomizedDelaySec = "45min";
-  };
 }
