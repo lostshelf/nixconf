@@ -14,10 +14,9 @@
       };
       timeout = 0;
     };
-    consoleDevice = "tty0";
     initrd.systemd.enable = true;
     consoleLogLevel = 0;
-    kernelParams = [ "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "udev.log_priority=0" "amd_pstate=active" ];
+    kernelParams = [ "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "udev.log_priority=0" "amd_pstate=active" "console=tty0" ];
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
@@ -51,7 +50,7 @@
     };
 
     gc = {
-      automatic = lib.mkDefault true;
+      automatic = lib.mkDefault false;
       dates = lib.mkDefault "weekly";
       options = lib.mkDefault "--delete-older-than 7d";
     };
@@ -128,7 +127,6 @@
     fwupd.enable = true;
     openssh.enable = true;
     samba.enable = true;
-    nix.gc.automatic = false;
   };
 
   programs = {
