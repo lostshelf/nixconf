@@ -14,6 +14,7 @@
       };
       timeout = 0;
     };
+    consoleDevice = "tty0";
     initrd.systemd.enable = true;
     consoleLogLevel = 0;
     kernelParams = [ "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "udev.log_priority=0" "amd_pstate=active" ];
@@ -23,6 +24,16 @@
   hardware = {
     enableAllFirmware = true;
     firmware = with pkgs; [ linux-firmware ];
+  };
+
+  systemd.timers.nix-gc-time = {
+    description = "Daily Nix Garbage Collection";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnCalendar = "daily";
+      AccuracySec = "15min";
+    };
+    services.NetworkManager-wait-online.enable = false;
   };
 
   virtualisation = {
@@ -117,6 +128,7 @@
     fwupd.enable = true;
     openssh.enable = true;
     samba.enable = true;
+    nix.gc.automatic = false;
   };
 
   programs = {
