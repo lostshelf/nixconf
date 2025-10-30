@@ -42,6 +42,7 @@
       xdg-utils
       flatpak
       pinentry-qt
+      gamemode
     ];
   };
 
