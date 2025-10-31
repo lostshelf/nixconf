@@ -18,6 +18,7 @@
       aqua
     ];
     dev_pkgs = with unstable; [
+      nmap
       docker
       kubectl
       distrobox
