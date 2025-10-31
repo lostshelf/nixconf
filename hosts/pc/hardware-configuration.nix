@@ -32,16 +32,19 @@
   fileSystems."/run/media/hadif/Storage" =
     { device = "/dev/disk/by-uuid/09a5bf2a-7538-46d9-9338-1e0edf3b31af";
       fsType = "btrfs";
+      options = [ "noauto" "x-systemd.automount" ];
     };
 
   fileSystems."/run/media/hadif/Storage2" =
     { device = "/dev/disk/by-uuid/15f21103-7508-6d40-6bf1-7d4016dd4057";
       fsType = "btrfs";
+      options = [ "noauto" "x-systemd.automount" ];
     };
 
   fileSystems."/run/media/hadif/Storage3" =
     { device = "/dev/disk/by-uuid/feb2407b-738b-4adc-a0b1-2838c896bfeb";
       fsType = "btrfs";
+      options = [ "noauto" "x-systemd.automount" ];
     };
 
   swapDevices = [{
