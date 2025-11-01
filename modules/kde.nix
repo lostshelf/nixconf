@@ -45,6 +45,7 @@
       libappindicator
       libappindicator-gtk3
       sqlite # required by vscode-runner
+      unrar # Needed by ark to extract rar archives
     ];
 
     kpkgs = with pkgs.kdePackages; [

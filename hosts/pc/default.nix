@@ -19,7 +19,6 @@
 
   boot = {
     blacklistedKernelModules = [ "nouveau" ];
-    consoleDevice = lib.mkForce null;
   };
 
   environment.systemPackages = with pkgs; [

@@ -34,7 +34,19 @@
         AccuracySec = "15min";
       };
     };
-    services.NetworkManager-wait-online.enable = false;
+    services = {
+      NetworkManager-wait-online.enable = false;
+      "serial-getty@ttyS0".enable = false;
+      "serial-getty@ttyS1".enable = false;
+      "serial-getty@ttyS2".enable = false;
+      "serial-getty@ttyS3".enable = false;
+      "serial-getty@ttyS4".enable = false;
+      "serial-getty@ttyS5".enable = false;
+      "serial-getty@ttyS6".enable = false;
+      "serial-getty@ttyS7".enable = false;
+      "serial-getty@ttyS8".enable = false;
+      "serial-getty@ttyS9".enable = false;
+    };
   };
 
   virtualisation = {
