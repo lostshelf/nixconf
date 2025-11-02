@@ -20,6 +20,9 @@
     };
     steam-hardware.enable = true;
     uinput.enable = true;
+    bluetooth = {
+      powerOnBoot = true;
+    };
   };
 
   virtualisation = {
