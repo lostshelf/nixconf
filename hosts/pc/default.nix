@@ -74,7 +74,6 @@
   programs = {
     atop.atopgpu.enable = true;
     gamemode.enable = true;
-    steam-hardware.enable = true;
   };
   services = {
     xserver.videoDrivers = [ "nvidia" ];
