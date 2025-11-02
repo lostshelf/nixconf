@@ -20,6 +20,9 @@
 
   boot = {
     blacklistedKernelModules = [ "nouveau" ];
+    extraModprobeConfig = ''
+      options hid_steam hidraw_only=0
+    '';
   };
 
   environment.systemPackages = let
