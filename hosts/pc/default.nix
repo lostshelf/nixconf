@@ -84,13 +84,10 @@
     udev.extraRules = ''
       SUBSYSTEM=="input", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="3106", MODE="0660", GROUP="input"
       ACTION=="add", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="11ff", RUN+="${pkgs.kmod}/bin/modprobe hid_steam"
+      SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="2073", MODE="0666"
     '';
-    bluez.settings = {
-      General = {
-        ControllerMode = "bredr";
-        Experimental = true;
-      };
-    };
+    joycond.enable = true;
+
   };
 
   networking = {
