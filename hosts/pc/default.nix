@@ -86,7 +86,7 @@
       ACTION=="add", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="11ff", RUN+="${pkgs.kmod}/bin/modprobe hid_steam"
     '';
     bluez.settings = {
-      General {
+      General = {
         ControllerMode = "bredr";
         Experimental = true;
       };
