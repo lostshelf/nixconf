@@ -83,7 +83,14 @@
     };
     udev.extraRules = ''
       SUBSYSTEM=="input", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="3106", MODE="0660", GROUP="input"
+      ACTION=="add", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="11ff", RUN+="${pkgs.kmod}/bin/modprobe hid_steam"
     '';
+    bluez.settings = {
+      General {
+        ControllerMode = "bredr";
+        Experimental = true;
+      };
+    };
   };
 
   networking = {
