@@ -19,11 +19,12 @@
   ];
 
   boot = {
-    kernelModules = [ "hid-nintendo" ];
+    kernelModules = [ "hid_nintendo" ];
     blacklistedKernelModules = [ "nouveau" ];
     extraModprobeConfig = ''
       options hid_steam hidraw_only=0
     '';
+    extraModulePackages = with config.boot.kernelPackages; [ hid-nintendo ];
   };
 
   environment.systemPackages = let
