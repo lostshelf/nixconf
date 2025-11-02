@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  unstable,
   lib,
   ...
 }: {
@@ -21,10 +22,32 @@
     blacklistedKernelModules = [ "nouveau" ];
   };
 
-  environment.systemPackages = with pkgs; [
-    egl-wayland
-    solaar
-  ];
+  environment.systemPackages = let
+    stble = with pkgs; [
+      egl-wayland
+      solaar
+      moonlight
+    ];
+    ustble = with unstable; [
+      sunshine
+    ];
+  in
+    ustble ++ stble;
+
+  security.wrappers = {
+    sunshine = {
+      owner = "root";
+      group = "root";
+      capabilities = "cap_sys_admin+p";
+      source = "${pkgs.sunshine}/bin/sunshine";
+    };
+    steam = {
+      owner = "root";
+      group = "root";
+      capabilities = "cap_sys_admin+ep";
+      source = "${pkgs.steam}/bin/steam";
+    };
+  };
 
   hardware = {
     nvidia = {
@@ -48,15 +71,35 @@
 
   fonts.fontconfig.antialias = true;
 
-  programs.atop.atopgpu.enable = true;
+  programs = {
+    atop.atopgpu.enable = true;
+    gamemode.enable = true;
+    steam-hardware.enable = true;
+  };
   services = {
     xserver.videoDrivers = [ "nvidia" ];
     power-profiles-daemon.enable = true;
+    avahi = {
+      publish = {
+        enable = true;
+        userServices = true;
+      };
+    };
+    udev.extraRules = ''
+      SUBSYSTEM=="input", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="3106", MODE="0660", GROUP="input"
+    '';
   };
 
   networking = {
     hostName = "pc";
     networkmanager.wifi.powersave = false;
+    firewall = {
+      allowedTCPPorts = [ 47984 47989 47990 48010 ];
+      allowedUDPPortRanges = [
+        { from = 47998; to = 48000; }
+        { from = 8000; to = 8010; }
+      ];
+    };
   };
 
   system.stateVersion = "25.05";
