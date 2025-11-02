@@ -41,12 +41,6 @@
       capabilities = "cap_sys_admin+p";
       source = "${pkgs.sunshine}/bin/sunshine";
     };
-    steam = {
-      owner = "root";
-      group = "root";
-      capabilities = "cap_sys_admin+ep";
-      source = "${pkgs.steam}/bin/steam";
-    };
   };
 
   hardware = {

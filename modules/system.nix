@@ -8,6 +8,7 @@
       hashedPassword = "$6$xJTUGzkqNfZKjW7O$csMz3bFAgNs7nvTzVWF/vyvvz9RdtSiNzTAgIx18ZR5V1XnFQtW/j2y6ekj.YF3niqwNis.IgS7HpBdVZCGu8.";
     };
     groups.libvirtd.members = [ "hadif" ];
+    extraGroups.steam = [ "input" "uinput" ];
   };
 
   hardware = {
@@ -16,6 +17,7 @@
       enable32Bit = true;
     };
     steam-hardware.enable = true;
+    uinput.enable = true;
   };
 
   virtualisation = {
@@ -71,6 +73,9 @@
       extraRules = ''
         KERNEL=="card*", SUBSYSTEM=="drm", GROUP="video", MODE="0660"
         KERNEL=="renderD*",SUBSYSTEM=="drm", GROUP="video", MODE="0660"
+        KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess", OPTIONS+="static_node=uinput"
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="28de", MODE="0660", TAG+="uaccess"
+        KERNEL=="hidraw*", ATTRS{idVendor}=="28de", MODE="0660", TAG+="uaccess"
       '';
     };
   };
