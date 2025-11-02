@@ -24,7 +24,6 @@
     extraModprobeConfig = ''
       options hid_steam hidraw_only=0
     '';
-    extraModulePackages = with config.boot.kernelPackages; [ hid-nintendo ];
   };
 
   environment.systemPackages = let
