@@ -19,7 +19,8 @@
   ];
 
   boot = {
-    blacklistedKernelModules = [ "nouveau" ];
+    kernelModules = [ "hid-nintendo" ];
+    blacklistedKernelModules = [ "nouveau" "hid-generic" ];
     extraModprobeConfig = ''
       options hid_steam hidraw_only=0
     '';
