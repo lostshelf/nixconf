@@ -40,8 +40,8 @@
       qt6.qttools
       jetbrains-runner
       # krunner-translator # Doesn't support plasma 6
-      krunner-vscodeprojects
-      vscode-runner
+      # krunner-vscodeprojects
+      # vscode-runner
       libappindicator
       libappindicator-gtk3
       sqlite # required by vscode-runner
