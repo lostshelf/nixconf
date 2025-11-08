@@ -95,6 +95,12 @@
         proton-ge-bin
       ];
       protontricks.enable = true;
+      package = pkgs.steam.override {
+        extraPkgs = pkgs: with pkgs; [
+          gamescope
+          gamemode
+        ];
+      };
     };
     gnupg.agent = {
       enable = true;

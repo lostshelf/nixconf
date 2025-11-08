@@ -55,6 +55,7 @@
       kcalc
       kcharselect
       kcolorchooser
+      kio-fuse
       kolourpaint
       ksystemlog
       sddm-kcm
