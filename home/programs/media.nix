@@ -13,6 +13,7 @@
     protonmail-bridge-gui
     virt-manager
     scrcpy
+    airtame
   ];
 
   programs = {
