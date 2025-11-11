@@ -34,6 +34,7 @@
     ];
     ustble = with unstable; [
       sunshine
+      gpu-screen-recorder
     ];
   in
     ustble ++ stble;
