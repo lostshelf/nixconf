@@ -24,7 +24,7 @@
       enable = true;
       powerOnBoot = true;
     };
-    pulseaudio.enable = false;
+
   };
 
   virtualisation = {
@@ -88,8 +88,6 @@
       '';
     };
   };
-
-  sound.enable = true;
 
   programs = {
     steam = {
