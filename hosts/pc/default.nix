@@ -20,10 +20,14 @@
 
   boot = {
     kernelModules = [ "hid_nintendo" ];
+    kernelParams = [ "nvidia.NVreg_EnableGpuFirmware=0" ];
     blacklistedKernelModules = [ "nouveau" ];
     extraModprobeConfig = ''
       options hid_steam hidraw_only=0
     '';
+    initrd = {
+      kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
+    };
   };
 
   environment.systemPackages = let
@@ -53,8 +57,9 @@
       nvidiaSettings = true;
       nvidiaPersistenced = true;
       modesetting.enable = true;
-      powerManagement.enable = false;
+      powerManagement.enable = true;
       powerManagement.finegrained = false;
+      forceFullCompositionPipeline = false;
       open = false;
       package = config.boot.kernelPackages.nvidiaPackages.production;
     };
