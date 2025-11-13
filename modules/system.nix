@@ -21,8 +21,10 @@
     steam-hardware.enable = true;
     uinput.enable = true;
     bluetooth = {
+      enable = true;
       powerOnBoot = true;
     };
+    pulseaudio.enable = false;
   };
 
   virtualisation = {
@@ -63,6 +65,8 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
+      jack.enable = true;
+      wireplumber.enable = true;
     };
     pulseaudio.enable = false;
     avahi = {
@@ -84,6 +88,8 @@
       '';
     };
   };
+
+  sound.enable = true;
 
   programs = {
     steam = {
