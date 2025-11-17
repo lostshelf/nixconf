@@ -35,5 +35,6 @@
     wxhexeditor
     valgrind
     yara
+    steghide
   ];
 }
