@@ -23,6 +23,7 @@
   hardware = {
     enableAllFirmware = true;
     firmware = with pkgs; [ linux-firmware ];
+    graphics.enable32Bit = true;
   };
 
   systemd = {
