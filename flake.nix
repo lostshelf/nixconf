@@ -22,7 +22,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, fw-fanctrl, copyparty, home-manager, nixos-hardware, chaotic, chaotic-nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, fw-fanctrl, copyparty, home-manager, nixos-hardware, chaotic, chaotic-unstable, ... }@inputs: {
     nixosConfigurations = {
       "framework" = let
         username = "hadif";
