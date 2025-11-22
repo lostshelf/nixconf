@@ -14,15 +14,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs";
-    chaotic-unstable.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    # Disable CachyOS kernel cuz it only works for Unstable setups
+    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs";
+    # chaotic-unstable.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # Using latest release due to the unstable nixpkgs repo
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, fw-fanctrl, copyparty, home-manager, nixos-hardware, chaotic, chaotic-unstable, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, fw-fanctrl, copyparty, home-manager, nixos-hardware, ... }@inputs: {
     nixosConfigurations = {
       "framework" = let
         username = "hadif";
@@ -77,7 +78,7 @@
               home-manager.backupFileExtension = "backup";
             }
 
-            chaoticUnstable.nixosModules.default
+            # chaoticUnstable.nixosModules.default
           ];
         };
         "server" = let

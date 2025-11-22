@@ -21,7 +21,6 @@
   boot = {
     kernelModules = [ "hid_nintendo" ];
     kernelParams = [ "nvidia.NVreg_EnableGpuFirmware=0" ];
-    kernelPackages = pkgs.linuxPackages_cachyos
     blacklistedKernelModules = [ "nouveau" ];
     extraModprobeConfig = ''
       options hid_steam hidraw_only=0
@@ -88,10 +87,6 @@
         enable = true;
         userServices = true;
       };
-    };
-    scx = {
-      enable = true;
-      scheduler = "scx_rustland";
     };
     udev.extraRules = ''
       SUBSYSTEM=="input", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="3106", MODE="0660", GROUP="input"
