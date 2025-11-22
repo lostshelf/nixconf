@@ -9,6 +9,7 @@
     aria2
     qbittorrent-enhanced
     deluge
+    tor-browser
   ];
 
   programs = {
