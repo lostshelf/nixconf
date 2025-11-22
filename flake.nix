@@ -14,12 +14,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs";
+    chaotic-unstable.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
     # Using latest release due to the unstable nixpkgs repo
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, fw-fanctrl, copyparty, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, fw-fanctrl, copyparty, home-manager, nixos-hardware, chaotic, chaotic-nixpkgs ... }@inputs: {
     nixosConfigurations = {
       "framework" = let
         username = "hadif";
@@ -53,6 +56,8 @@
         username = "hadif";
         system = "x86_64-linux";
         unstable = import nixpkgs-unstable { inherit system; config = { allowUnfree = true; }; };
+        chaotic = import chaotic { inherit system; config = { allowUnfree = true; }; };
+        chaoticUnstable = import chaotic-unstable { inherit system; config = { allowUnfree = true; }; };
         specialArgs = { inherit username; inherit system; inherit unstable; inherit copyparty; };
       in
         nixpkgs.lib.nixosSystem {
@@ -71,6 +76,8 @@
               home-manager.users.${username} = import ./users/${username}/home.nix;
               home-manager.backupFileExtension = "backup";
             }
+
+            chaoticUnstable.nixosModules.default
           ];
         };
         "server" = let
