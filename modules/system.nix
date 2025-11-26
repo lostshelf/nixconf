@@ -44,6 +44,7 @@
         enable = true;
         enableExtensionPack = true;
         enableKvm = true;
+        addNetworkInterface = false;
       };
     };
   };
