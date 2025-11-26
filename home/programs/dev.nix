@@ -41,12 +41,14 @@
       cmake
       ninja
       gnum4
-      virtualbox
       # android-studio-full
       # android-studio-tools
     ];
+    dev = with pkgs; [
+      virtualbox
+    ];
   in
-    dev_pkgs++ jetbrain_ides;
+    dev_pkgs ++ jetbrain_ides ++ dev;
 
   programs = {
     tmux = {
