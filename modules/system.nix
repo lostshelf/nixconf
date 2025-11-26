@@ -39,6 +39,13 @@
         };
       };
     };
+    virtualbox = {
+      host = {
+        enable = true;
+        enableExtensionPack = true;
+        enableKvm = true;
+      };
+    };
   };
 
   environment = {

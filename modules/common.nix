@@ -95,7 +95,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "Hadi Faraz";
-    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render" "libvirtd" "input" "uinput"];
+    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render" "libvirtd" "input" "uinput" "vboxusers"];
   };
 
   fonts = {

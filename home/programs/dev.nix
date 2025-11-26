@@ -45,7 +45,7 @@
       # android-studio-tools
     ];
     dev = with pkgs; [
-      virtualbox
+      # virtualbox
     ];
   in
     dev_pkgs ++ jetbrain_ides ++ dev;
