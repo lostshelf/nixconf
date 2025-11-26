@@ -16,7 +16,6 @@
       dataspell
       datagrip
       aqua
-      virtualbox
     ];
     dev_pkgs = with unstable; [
       nmap
@@ -42,6 +41,7 @@
       cmake
       ninja
       gnum4
+      virtualbox
       # android-studio-full
       # android-studio-tools
     ];
