@@ -16,6 +16,7 @@
       dataspell
       datagrip
       aqua
+      virtualbox
     ];
     dev_pkgs = with unstable; [
       nmap
