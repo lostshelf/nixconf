@@ -57,8 +57,6 @@
         username = "hadif";
         system = "x86_64-linux";
         unstable = import nixpkgs-unstable { inherit system; config = { allowUnfree = true; }; };
-        chaotic = import chaotic { inherit system; config = { allowUnfree = true; }; };
-        chaoticUnstable = import chaotic-unstable { inherit system; config = { allowUnfree = true; }; };
         specialArgs = { inherit username; inherit system; inherit unstable; inherit copyparty; };
       in
         nixpkgs.lib.nixosSystem {
