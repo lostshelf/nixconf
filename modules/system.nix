@@ -63,6 +63,8 @@
     ];
   };
 
+  i18n.extraLocales = [ "es_VE.UTF-8/UTF-8" ];
+
   security.rtkit.enable = true;
 
   services = {
