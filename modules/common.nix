@@ -24,8 +24,6 @@
     };
   };
 
-  config.boot.plymouth.theme = "breeze";
-
   hardware = {
     enableAllFirmware = true;
     firmware = with pkgs; [ linux-firmware ];
