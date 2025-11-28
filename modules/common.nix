@@ -18,7 +18,13 @@
     consoleLogLevel = 0;
     kernelParams = [ "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "amd_pstate=active" "nvidia-drm.modeset=1" "console=tty0" ];
     kernelPackages = pkgs.linuxPackages_latest;
+    plymouth = {
+      enable = true;
+      theme = "breeze";
+    };
   };
+
+  config.boot.plymouth.theme = "breeze";
 
   hardware = {
     enableAllFirmware = true;
