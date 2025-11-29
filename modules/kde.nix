@@ -61,7 +61,6 @@
       sddm-kcm
       kate
       plymouth-kcm
-      sddm-kcm
       plasma-firewall
       kwallet-pam
       flatpak-kcm
