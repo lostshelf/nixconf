@@ -5,8 +5,8 @@
     ../../home/shell
   ];
 
-  programs.git = {
-    userName = "Hadi Faraz";
-    userEmail = "hadifaraz52@protonmail.com";
+  programs.git.settings.user = {
+    name = "Hadi Faraz";
+    email = "hadifaraz52@protonmail.com";
   };
 }
