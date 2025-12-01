@@ -22,7 +22,6 @@
     rr
     wireshark
     tcpdump
-    retdec
     ropgadget
     gdb-dashboard
     just
