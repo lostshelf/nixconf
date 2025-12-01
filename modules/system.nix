@@ -68,6 +68,7 @@
       flatpak
       pinentry-qt
       gamemode
+      steam-run
     ];
   };
 
