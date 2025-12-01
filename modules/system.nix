@@ -26,6 +26,15 @@
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+      settings = {
+        General = {
+          Experimental = true;
+          FastConnectable = true;
+        };
+        Policy = {
+          AutoEnable = true;
+        };
+      };
     };
 
   };
@@ -36,10 +45,6 @@
       enable = true;
       qemu = {
         swtpm.enable = true;
-        ovmf = {
-          enable = true;
-          packages = with pkgs; [ OVMFFull.fd ];
-        };
       };
     };
     virtualbox = {
@@ -63,6 +68,7 @@
       flatpak
       pinentry-qt
       gamemode
+      steam-run
     ];
   };
 
@@ -116,9 +122,20 @@
         extraPkgs = pkgs: with pkgs; [
           gamescope
           gamemode
+          xorg.libXcursor
+          xorg.libXi
+          xorg.libXinerama
+          xorg.libXScrnSaver
+          libpng
+          libpulseaudio
+          libvorbis
+          stdenv.cc.cc.lib
+          libkrb5
+          keyutils
         ];
       };
     };
+    gamemode.enable = true;
     gnupg.agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-qt;

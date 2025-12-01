@@ -22,8 +22,6 @@
     rr
     wireshark
     tcpdump
-    retdec
-    snowman
     ropgadget
     gdb-dashboard
     just

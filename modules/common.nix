@@ -99,16 +99,17 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "Hadi Faraz";
-    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render" "libvirtd" "input" "uinput" "vboxusers"];
+    extraGroups = ["networkmanager" "wheel" "dialout" "docker" "video" "render" "libvirtd" "input" "uinput" "vboxusers" "gamemode"];
   };
 
   fonts = {
+    fontconfig.useEmbeddedBitmaps = true;
     packages = with pkgs; [
       material-design-icons
 
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
 
       nerd-fonts.symbols-only # symbols icon only
       nerd-fonts.fira-code
