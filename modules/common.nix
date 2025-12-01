@@ -103,6 +103,7 @@
   };
 
   fonts = {
+    fontconfig.useEmbeddedBitmaps = true;
     packages = with pkgs; [
       material-design-icons
 
