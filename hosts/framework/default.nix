@@ -32,6 +32,9 @@
         libvdpau-va-gl
       ];
     };
+    fw-fanctrl = {
+      enable = true;
+    };
   };
 
   boot = {
@@ -58,12 +61,6 @@
 
   environment.sessionVariables = {
     KWIN_OPENGL_INTERFACE = "egl_gles";
-  };
-
-  programs = {
-    fw-fanctrl = {
-      enable = true;
-    };
   };
 
   system.autoUpgrade = {

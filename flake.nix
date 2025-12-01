@@ -9,11 +9,6 @@
 
     copyparty.url = "github:9001/copyparty";
 
-    fw-fanctrl = {
-      url = "github:TamtamHero/fw-fanctrl/packaging/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Disable CachyOS kernel cuz it only works for Unstable setups
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs";
     # chaotic-unstable.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
@@ -23,7 +18,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, fw-fanctrl, copyparty, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, copyparty, home-manager, nixos-hardware, ... }@inputs: {
     nixosConfigurations = {
       "framework" = let
         username = "hadif";
@@ -38,8 +33,6 @@
             ./hosts/framework
 
             nixos-hardware.nixosModules.framework-16-7040-amd
-
-            fw-fanctrl.nixosModules.default
 
             ./users/${username}/nixos.nix
 
