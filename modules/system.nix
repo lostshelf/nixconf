@@ -1,7 +1,7 @@
 { pkgs, lib, unstable, username, config, ...}: {
   boot = {
     plymouth.enable = true;
-    kernelParams = [ "kvm.enable_virt_at_load=0" ];
+    kernelParams = [  ];
   };
 
   users = {
