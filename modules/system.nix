@@ -61,12 +61,9 @@
     };
   };
 
-  systemd.services.getty@tty1.service.serviceConfig = {
-    # Clear existing ExecStart directives
-    ExecStart = [ "" ];
-
+  systemd.services."getty@tty1.service".serviceConfig = {
     # Set the new ExecStart line for autologin
-    ExecStart = "-/sbin/agetty --skip-login --nonewline --noissue --autologin your_username_here --noreset --noclear - ${TERM}";
+    ExecStart = "-/sbin/agetty --skip-login --nonewline --noissue --autologin your_username_here --noreset --noclear - $${TERM}";
   };
 
   environment = {

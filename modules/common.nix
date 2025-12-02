@@ -33,6 +33,8 @@
     graphics.enable32Bit = true;
   };
 
+  nix.settings.auto-optimise-store = true;
+
   systemd = {
     timers.nix-gc-time = {
       description = "Daily Nix Garbage Collection";
