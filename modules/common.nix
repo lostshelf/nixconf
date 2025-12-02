@@ -33,15 +33,6 @@
     graphics.enable32Bit = true;
   };
 
-  nix = {
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-    settings.auto-optimise-store = true;
-  };
-
   systemd = {
     timers.nix-gc-time = {
       description = "Daily Nix Garbage Collection";
@@ -81,7 +72,7 @@
     };
 
     gc = {
-      automatic = lib.mkDefault false;
+      automatic = lib.mkDefault true;
       dates = lib.mkDefault "weekly";
       options = lib.mkDefault "--delete-older-than 7d";
     };
