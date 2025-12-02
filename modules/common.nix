@@ -14,9 +14,12 @@
       };
       timeout = 0;
     };
-    initrd.systemd.enable = true;
-    consoleLogLevel = 0;
-    kernelParams = [ "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "amd_pstate=active" "nvidia-drm.modeset=1" "console=tty0" "kvm.enable_virt_at_load=0" ];
+    initrd = {
+      systemd.enable = true;
+      verbose = false;
+    };
+    consoleLogLevel = 3;
+    kernelParams = [ "quiet" "splash" "loglevel=3" "boot.shell_on_fail" "udev.log_priority=3""systemd.show_status=auto" "rd.systemd.show_status=auto" "amd_pstate=active"];
     kernelPackages = pkgs.linuxPackages_latest;
     plymouth = {
       enable = true;

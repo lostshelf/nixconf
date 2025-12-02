@@ -1,7 +1,11 @@
 { pkgs, lib, unstable, username, config, ...}: {
   boot = {
     plymouth.enable = true;
-    kernelParams = [  ];
+    initrd.kernelModules = [ ];
+    kernelParams = [ "vt.global_cursor_default=0" "console=tty0" "kvm.enable_virt_at_load=0"  ];
+    kernel.sysctl = {
+      "kernel.printk" = "3 3 3 3";
+    };
   };
 
   users = {
@@ -74,7 +78,10 @@
 
   i18n.extraLocales = [ "es_VE.UTF-8/UTF-8" ];
 
-  security.rtkit.enable = true;
+  security = {
+    rtkit.enable = true;
+    pam.services.sddm.kwallet.enable = true;
+  };
 
   services = {
     flatpak.enable = true;

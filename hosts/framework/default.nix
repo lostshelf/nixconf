@@ -43,7 +43,7 @@
       options iwlwifi bt_coex_active=0
     '';
     kernelParams = [
-      "quiet" "splash" "loglevel=0" "systemd.show_status=false" "rd.systemd.show_status=false" "amd_pstate=active" "nvidia-drm.modeset=1" "console=tty0" "kvm.enable_virt_at_load=0"
+      "amd_pstate=active"
       "pcie_aspm=off"
       "intel_idle.max_cstate=1"
       "nowatchdog"
@@ -53,6 +53,26 @@
   };
 
   networking.hostName = "framework";
+
+  services.fprintd = {
+    enable = true;
+    tod = {
+      enable = true;
+      driver = pkgs."libfprint-2-tod1-goodix";
+    };
+  };
+
+  security.pam.services.sddm = {
+    fprintAuth = true;
+    text = "
+    auth      [success=1 new_authtok_reqd=1 default=ignore]  pam_unix.so try_first_pass likeauth nullok
+    auth      sufficient                                     pam_fprintd.so
+    auth      substack                                       login
+    account   include                                        login
+    password  substack                                       login
+    session   include                                        login
+    ";
+  };
 
   environment.systemPackages = with unstable; [
     fw-fanctrl

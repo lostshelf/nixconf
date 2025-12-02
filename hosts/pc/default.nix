@@ -20,7 +20,7 @@
 
   boot = {
     kernelModules = [ "hid_nintendo" ];
-    kernelParams = [ "nvidia.NVreg_EnableGpuFirmware=0" ];
+    kernelParams = [ "nvidia.NVreg_EnableGpuFirmware=0" "nvidia-drm.modeset=1" ];
     blacklistedKernelModules = [ "nouveau" ];
     extraModprobeConfig = ''
       options hid_steam hidraw_only=0
