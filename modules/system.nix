@@ -77,6 +77,7 @@
       flatpak
       pinentry-qt
       gamemode
+      nh
       steam-run
     ];
   };
