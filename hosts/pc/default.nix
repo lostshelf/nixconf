@@ -64,7 +64,7 @@
       open = false;
       package = config.boot.kernelPackages.nvidiaPackages.production;
     };
-    xpadneo.enable = true;
+    # xpadneo.enable = true;
     bluetooth.enable = true;
     logitech.wireless.enable = true;
     steam-hardware.enable = true;
