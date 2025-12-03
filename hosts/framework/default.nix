@@ -50,6 +50,7 @@
       "nosoftlockup"
       "snd_hda_intel.model=alc1318-dell-headset-multi"
     ];
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking.hostName = "framework";

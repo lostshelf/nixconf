@@ -20,7 +20,6 @@
     };
     consoleLogLevel = 3;
     kernelParams = [ "quiet" "splash" "loglevel=3" "boot.shell_on_fail" "udev.log_priority=3""systemd.show_status=auto" "rd.systemd.show_status=auto" "amd_pstate=active"];
-    kernelPackages = pkgs.linuxPackages_latest;
     plymouth = {
       enable = true;
       theme = "breeze";

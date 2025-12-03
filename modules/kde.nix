@@ -30,7 +30,6 @@
     npkgs = with pkgs; [
       kdiff3
       hardinfo2
-      isoimagewriter
       wayland-utils
       wl-clipboard
       krename
@@ -50,6 +49,7 @@
 
     kpkgs = with pkgs.kdePackages; [
       dolphin-plugins
+      isoimagewriter
       kdegraphics-thumbnailers
       discover
       kcalc

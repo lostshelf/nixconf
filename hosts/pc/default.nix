@@ -28,6 +28,7 @@
     initrd = {
       kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
     };
+    kernelPackages = pkgs.linuxPackages_cachyos;
   };
 
   environment.systemPackages = let

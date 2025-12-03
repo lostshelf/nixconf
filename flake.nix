@@ -10,15 +10,17 @@
     copyparty.url = "github:9001/copyparty";
 
     # Disable CachyOS kernel cuz it only works for Unstable setups
-    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs";
-    # chaotic-unstable.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # Using latest release due to the unstable nixpkgs repo
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    home-manager-unstable.url = "github:nix-community/home-manager/master";
+    home-manager-unstable.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, copyparty, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { self, chaotic, nixpkgs, nixpkgs-unstable, copyparty, home-manager, home-manager-unstable, nixos-hardware, ... }@inputs: {
     nixosConfigurations = {
       "framework" = let
         username = "hadif";
@@ -50,9 +52,10 @@
         username = "hadif";
         system = "x86_64-linux";
         unstable = import nixpkgs-unstable { inherit system; config = { allowUnfree = true; }; };
+        nixpkgs = import nixpkgs-unstable { inherit system; config = { allowUnfree = true; }; };
         specialArgs = { inherit username; inherit system; inherit unstable; inherit copyparty; };
       in
-        nixpkgs.lib.nixosSystem {
+        nixpkgs-unstable.lib.nixosSystem {
           inherit specialArgs;
 
           modules = [
@@ -60,7 +63,7 @@
 
             ./users/${username}/nixos.nix
 
-            home-manager.nixosModules.home-manager {
+            home-manager-unstable.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
@@ -69,7 +72,7 @@
               home-manager.backupFileExtension = "backup";
             }
 
-            # chaoticUnstable.nixosModules.default
+            chaotic.nixosModules.default
           ];
         };
         "server" = let

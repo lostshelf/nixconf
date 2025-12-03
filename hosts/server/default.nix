@@ -5,6 +5,7 @@
   ];
 
   networking.hostName = "server";
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   services = {
     cockpit = {
