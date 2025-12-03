@@ -1,15 +1,17 @@
 { config, ...}: {
   programs = {
-    zoxide.enableFishIntegration = true;
+  zoxide.enableFishIntegration = true;
     fish = {
       functions = {
         nixcfg = {
+          enable = true;
           description = "Open /etc/nixos with Kate";
           body = ''
             kate /etc/nixos
           '';
         };
         full_upgrade = {
+          enable = true;
           description = "Update channels and rebuild";
           body = ''
             cd /etc/nixos

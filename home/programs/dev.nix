@@ -16,6 +16,7 @@
       dataspell
       datagrip
       aqua
+      jetbrains-toolbox
     ];
     dev_pkgs = with unstable; [
       nmap
@@ -24,7 +25,6 @@
       distrobox
       podman
       devcontainer
-      jetbrains-toolbox
       python3 # Needed for IDA
       qemu
       rustup
