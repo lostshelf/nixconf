@@ -16,7 +16,6 @@
       dataspell
       datagrip
       aqua
-      jetbrains-toolbox
     ];
     dev_pkgs = with unstable; [
       nmap
