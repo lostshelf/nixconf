@@ -6,8 +6,6 @@
       overrideConfig = false;
       kwin = {
         effects.shakeCursor.enable = false;
-        effects.translucency.enable = true;
-        effects.blur.enable = true;
         edgeBarrier = 0;
       };
       workspace = {
@@ -15,8 +13,8 @@
       };
       panels = [
         {
-          location = "bottom";
-          screen = 0;
+          location = "floating";
+          screen = "all";
           widgets = [
             {
               kickoff = {
@@ -105,6 +103,7 @@
                   showSeconds = "onlyInTooltip";
                 };
               };
+              "org.kde.plasma.showdesktop"
             }
           ];
         }
