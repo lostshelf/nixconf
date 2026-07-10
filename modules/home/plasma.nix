@@ -4,6 +4,41 @@
     programs.plasma = {
       enable = true;
       overrideConfig = false;
+      input = {
+        keyboard = {
+          repeatDelay = 300;
+          repeatRate = 50;
+          options = [ "compose:ralt" ];
+        };
+        mice = [
+          # Wireless
+          {
+            enable = true;
+            name = "Logitech PRO X 2";
+            vendorId = "046d";
+            productId = "40a9";
+            leftHanded = false;
+            middleButtonEmulation = false;
+            acceleration = 0.4;
+            accelerationProfile = "none";
+            naturalScroll = false;
+            scrollSpeed = 0.35;
+          }
+          # Dongle
+          {
+            enable = true;
+            name = "Logitech PRO X 2";
+            vendorId = "046d";
+            productId = "c09b";
+            leftHanded = false;
+            middleButtonEmulation = false;
+            acceleration = 0.2;
+            accelerationProfile = "none";
+            naturalScroll = false;
+            scrollSpeed = 0.35;
+          }
+        ];
+      };
       kwin = {
         effects.shakeCursor.enable = false;
         edgeBarrier = 0;
@@ -109,7 +144,6 @@
         }
       ];
 
-      input.keyboard.options = [ "compose:ralt" ];
       shortcuts = {
         ActivityManager.switch-to-activity-790474b2-8553-4f1d-823a-ca179b01e23d = [ ];
         "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
