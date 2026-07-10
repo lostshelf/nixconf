@@ -22,6 +22,8 @@
         ".config/Proton Pass/Local Storage"
         ".config/Proton Pass/IndexedDB"
         ".config/Proton Pass/Session Storage"
+
+        ".config/chromium"
       ];
     };
   };
