@@ -10,6 +10,8 @@
       proton-vpn
 
       ungoogled-chromium
+
+      blender
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {
