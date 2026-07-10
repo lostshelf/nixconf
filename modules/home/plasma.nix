@@ -103,8 +103,8 @@
                   showSeconds = "onlyInTooltip";
                 };
               };
-              "org.kde.plasma.showdesktop"
             }
+            "org.kde.plasma.showdesktop"
           ];
         }
       ];
