@@ -22,7 +22,7 @@
             acceleration = 0.4;
             accelerationProfile = "none";
             naturalScroll = false;
-            scrollSpeed = 0.35;
+            scrollSpeed = 1;
           }
           # Dongle
           {
@@ -35,7 +35,7 @@
             acceleration = 0.2;
             accelerationProfile = "none";
             naturalScroll = false;
-            scrollSpeed = 0.35;
+            scrollSpeed = 1;
           }
         ];
       };
