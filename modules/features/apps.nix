@@ -8,6 +8,8 @@
 
       proton-pass
       proton-vpn
+
+      ungoogled-chromium
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {
