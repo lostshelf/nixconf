@@ -12,6 +12,8 @@
       ungoogled-chromium
 
       blender
+
+      texliveMedium
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {

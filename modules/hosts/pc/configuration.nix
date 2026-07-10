@@ -41,6 +41,7 @@
     };
 
     fonts.fontconfig.useEmbeddedBitmaps = true;
+    fonts.fontDir.enable = true;
     fonts.packages = with pkgs; [
       material-design-icons
 
@@ -48,7 +49,7 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
 
-      nerd-fonts.symbols-only # symbols icon only
+      nerd-fonts.symbols-only
       nerd-fonts.fira-code
       nerd-fonts.jetbrains-mono
       nerd-fonts.iosevka
