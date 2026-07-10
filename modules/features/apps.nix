@@ -15,6 +15,14 @@
 
       texliveMedium
       texstudio
+
+      libreoffice-qt-fresh
+      wpsoffice
+      onlyoffice-desktopeditors
+
+      hunspell
+      hunspellDicts.en_CA
+      hunspellDicts.de_DE
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {

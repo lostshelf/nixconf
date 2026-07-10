@@ -33,6 +33,7 @@
         libappindicator
         libappindicator-gtk3
         unrar
+        tesseract
       ];
 
       kpkgs = with pkgs.kdePackages; [
