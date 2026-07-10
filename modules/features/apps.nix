@@ -14,6 +14,7 @@
       blender
 
       texliveMedium
+      texstudio
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {
