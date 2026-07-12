@@ -41,6 +41,8 @@
       };
       kwin = {
         effects.shakeCursor.enable = false;
+        effects.translucency.enable = false;
+        effects.blur.enable = false;
         edgeBarrier = 0;
       };
       workspace = {
