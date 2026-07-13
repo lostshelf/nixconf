@@ -53,7 +53,8 @@
           location = "floating";
           screen = "all";
           floating = true;
-          hiding = "dodgewindows";
+          hiding = "none";
+          offset = 200;
           widgets = [
             {
               kickoff = {

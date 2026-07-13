@@ -7,7 +7,10 @@
       useUserPackages = true;
       extraSpecialArgs = { inherit inputs self; };
       users.hadif = {
-        imports = [ self.homeModules.plasmaConfig ];
+        imports = with self.homeModules; [
+          plasmaConfig
+          gitConfig
+        ];
 
         home.stateVersion = "26.05";
       };
