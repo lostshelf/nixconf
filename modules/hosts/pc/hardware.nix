@@ -33,10 +33,12 @@
     hardware.graphics.enable32Bit = true;
     hardware.nvidia.open = true;
     hardware.nvidia.modesetting.enable = true;
-    hardware.nvidia.powerManagement.enable = true;
+    hardware.nvidia.powerManagement.enable = false;
     hardware.nvidia.powerManagement.finegrained = false;
     hardware.nvidia.forceFullCompositionPipeline = false;
     hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+    hardware.logitech.wireless.enable = true;
+    hardware.keyboard.qmk.keychronSupport = true;
 
     hardware.uinput.enable = true;
 

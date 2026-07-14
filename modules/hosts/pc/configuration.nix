@@ -68,6 +68,8 @@
 
     environment.systemPackages = with pkgs; [
       fishPlugins.tide
+      droidcam
+      scrcpy
     ];
 
     programs.nix-index-database.comma.enable = true;
@@ -99,6 +101,15 @@
       clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
       flake = "/home/hadif/Documents/nixos_new";
+    };
+
+    programs.obs-studio = {
+      enable = true;
+      enableVirtualCamera = true;
+      plugins = with pkgs; [
+        obs-vaapi
+        droidcam-obs
+      ];
     };
 
     services.openssh.enable = true;
