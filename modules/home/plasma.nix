@@ -48,7 +48,6 @@
           zoom.enable = false;
           magnifier.enable = false;
         };
-        navigationWrapping = true;
         edgeBarrier = 0;
         scripts = {
 
@@ -570,6 +569,16 @@
         "kate/anonymous.katesession"."Plugin:katesearchplugin:MainWindow:0".SearchDiskFiless = "";
         "kate/anonymous.katesession"."Plugin:katesearchplugin:MainWindow:0".SizeLimit = 128;
         "kate/anonymous.katesession"."Plugin:katesearchplugin:MainWindow:0".UseRegExp = false;
+      };
+    };
+    programs.kate = {
+      enable = true;
+      editor = {
+        tabWidth = 2;
+        indent.showLines = true;
+        indent.autodetect = true;
+        indent.keepExtraSpaces = false;
+        indent.ReplaceWithSpaces = true;
       };
     };
   };
