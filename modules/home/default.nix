@@ -10,14 +10,12 @@
       extraSpecialArgs = { inherit inputs self; };
       backupFileExtension = "hm-bak";
       sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
-      users.hadif.imports = [
-        config.flake.homeModules.hadif
-        config.flake.homeModules.plasmaConfig
-        config.flake.homeModules.gitConfig
-        config.flake.homeModules.vscConfig
+      users.hadif.imports = with self.homeModules; [
+        { home.stateVersion = "26.05"; }
+        plasmaConfig
+        gitConfig
+        vscConfig
       ];
     };
   };
-
-  flake.homeModules.hadif = { home.stateVersion = "26.05"; };
 }
