@@ -44,6 +44,7 @@
       mangohud
       r2modman
       prismlauncher
+      xenia-canary
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {
