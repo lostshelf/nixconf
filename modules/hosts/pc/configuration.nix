@@ -25,12 +25,6 @@
 
     networking.hostName = "pc";
     networking.networkmanager.enable = true;
-    networking.enable = true;
-    networking.firewall = {
-      enable = true;
-      trustedInterfaces = [ config.services.tailscale.interfaceName ];
-      allowedUDPPorts = [ config.services.tailscale.port ];
-    };
 
     time.timeZone = "America/Edmonton";
     i18n.defaultLocale = "en_CA.UTF-8";
@@ -76,6 +70,7 @@
       fishPlugins.tide
       droidcam
       scrcpy
+      tailscale
     ];
 
     programs.nix-index-database.comma.enable = true;
@@ -124,14 +119,6 @@
     services.flatpak.enable = true;
     services.printing.enable = true;
     services.fwupd.enable = true;
-    services.tailscale.enable = true;
-
-    systemd.services.tailscaled.serviceConfig.Environment = [
-      "TS_DEBUG_FIREWALL_MODE=nftables"
-    ];
-
-    systemd.network.wait-online.enable = false;
-    boot.initrd.systemd.network.wait-online.enable = false;
 
     virtualisation.spiceUSBRedirection.enable = true;
     virtualisation.libvirtd = {
