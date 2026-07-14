@@ -57,6 +57,12 @@
       workspace = {
         lookAndFeel = "org.kde.breezedark.desktop";
       };
+      krunner = {
+        position = "center";
+        activateWhenTypingOnDesktop = true;
+        historyBehavior = "enableAutoComplete";
+        shortcuts.launch = "Meta+Space";
+      };
       panels = [
         {
           location = "bottom";
