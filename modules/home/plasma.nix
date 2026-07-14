@@ -40,21 +40,30 @@
         ];
       };
       kwin = {
-        effects.shakeCursor.enable = false;
-        effects.translucency.enable = false;
-        effects.blur.enable = false;
+        effects = {
+          shakeCursor.enable = false;
+          translucency.enable = true;
+          blur.enable = true;
+          hideCursor.enable = false;
+          zoom.enable = false;
+          magnifier.enable = false;
+        };
+        navigationWrapping = true;
         edgeBarrier = 0;
+        scripts = {
+
+        };
       };
       workspace = {
         lookAndFeel = "org.kde.breezedark.desktop";
       };
       panels = [
         {
-          location = "floating";
+          location = "bottom";
           screen = "all";
-          floating = true;
           hiding = "none";
-          offset = 200;
+          floating = true;
+          alignment = "center";
           widgets = [
             {
               kickoff = {

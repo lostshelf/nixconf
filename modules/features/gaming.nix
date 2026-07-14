@@ -45,7 +45,16 @@
       r2modman
       prismlauncher
       xenia-canary
+      wineWow64Packages.waylandFull
     ];
+
+    # Add `PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/wivrn/comp_ipc %command%` to launch options of VR game
+    services.wivrn = {
+      enable = true;
+      openFirewall = true;
+      autoStart = true;
+      package = (pkgs.wivrn.override { cudaSupport = true; });
+    };
 
     preservation.preserveAt."/persistent".users.hadif = {
       directories = [

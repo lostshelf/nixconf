@@ -36,6 +36,7 @@
     hardware.nvidia.powerManagement.enable = true;
     hardware.nvidia.powerManagement.finegrained = false;
     hardware.nvidia.forceFullCompositionPipeline = false;
+    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
 
     hardware.uinput.enable = true;
 
