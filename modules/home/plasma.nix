@@ -55,6 +55,7 @@
       };
       workspace = {
         lookAndFeel = "org.kde.breezedark.desktop";
+        tooltipDelay = 5;
       };
       krunner = {
         position = "center";
