@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.homeModules.plasmaConfig = { pkgs, ... }: {
+  flake.homeModules.gitConfig = { pkgs, ... }: {
     programs.git = {
       enable = true;
       config.user = {
