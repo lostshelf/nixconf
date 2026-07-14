@@ -5,9 +5,10 @@
       profiles.default.extensions = with pkgs.vscode-extensions; [
         rust-lang.rust-analyzer
         bungcip.better-toml
-        even-better-toml
+        tamasfe.even-better-toml
         james-yu.latex-workshop
         tecosaur.latex-utilities
+        formulahendry.code-runner
       ];
     };
   };
