@@ -4,7 +4,7 @@
       enable = true;
       config.user = {
         name = "Hadi Faraz";
-        email = "hadifaraz52@protonmail.com
+        email = "hadifaraz52@protonmail.com";
       };
     };
   };
