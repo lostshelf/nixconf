@@ -578,7 +578,21 @@
         indent.showLines = true;
         indent.autodetect = true;
         indent.keepExtraSpaces = false;
-        indent.ReplaceWithSpaces = true;
+        indent.replaceWithSpaces = true;
+      };
+    };
+    programs.okular = {
+      enable = true;
+      general = {
+        smoothScrolling = true;
+        showScrollbars = true;
+        openFileInTabs = true;
+        viewMode = "Single";
+        obeyDrm = false;
+      };
+      performance = {
+        enableTransparencyEffects = true;
+        memoryUsage = "Aggressive";
       };
     };
   };
