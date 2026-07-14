@@ -53,6 +53,9 @@
             "Pictures"
 
             "nixos"
+
+            ".var/app"
+            ".local/share/flatpak"
           ];
 
           files = [
