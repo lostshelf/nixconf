@@ -74,7 +74,10 @@
 
     programs.firefox.enable = true;
 
-    programs.git.enable = true;
+    programs.git = {
+      enable = true;
+      lfs.enable = true;
+    };
 
     programs.gnupg.agent = {
       enable = true;

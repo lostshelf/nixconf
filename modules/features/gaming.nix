@@ -56,12 +56,22 @@
       package = (pkgs.wivrn.override { cudaSupport = true; });
     };
 
+    services.monado = {
+       enable = true;
+    };
+
+    systemd.user.services.monado.environment = {
+      STEAMVR_LH_ENABLE = "1";
+      XRT_COMPOSITOR_COMPUTE = "1";
+    };
+
     preservation.preserveAt."/persistent".users.hadif = {
       directories = [
         ".local/share/Steam"
         ".local/share/PrismLauncher"
         ".local/share/Terraria"
         ".config/r2modmanPlus-local"
+        ".local/share/monado"
       ];
     };
   };
