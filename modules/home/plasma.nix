@@ -96,6 +96,16 @@
               };
             }
             {
+              name = "gpu/gpu1/usage";
+              color = "180,190,254";
+              label = "GPU %";
+            }
+            {
+              panelSpacer = {
+                expanding = true;
+              };
+            }
+            {
               systemTray = {
                 items = {
                   showAll = false;

@@ -46,6 +46,8 @@
       prismlauncher
       xenia-canary
       wineWow64Packages.waylandFull
+      unixbench
+      geekbench
     ];
 
     # Add `PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/wivrn/comp_ipc %command%` to launch options of VR game

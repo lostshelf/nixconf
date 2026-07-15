@@ -24,6 +24,11 @@
     boot.plymouth.enable = true;
     boot.plymouth.theme = "breeze";
 
+    boot.kernel.sysctl = {
+      "vm.vfs_cache_pressure" = 50;
+      "vm.swappiness" = 10;
+    };
+
     hardware.bluetooth.enable = true;
     hardware.bluetooth.powerOnBoot = true;
 
@@ -48,6 +53,8 @@
 
     networking.hostName = "pc";
     networking.networkmanager.wifi.powersave = false;
+
+    environment.sessionVariables.PLASMA_PRELOAD_POLICY = "aggressive";
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
     hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
