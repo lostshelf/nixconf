@@ -96,9 +96,20 @@
               };
             }
             {
-              name = "gpu/gpu1/usage";
-              color = "180,190,254";
-              label = "GPU %";
+              systemMonitor = {
+                sensors = [
+                  {
+                    name = "gpu/gpu1/usage";
+                    color = "180,190,254";
+                    label = "GPU %";
+                  }
+                  {
+                    name = "cpu/all/usage";
+                    color = "180,190,254";
+                    label = "CPU %";
+                  }
+                ];
+              };
             }
             {
               panelSpacer = {

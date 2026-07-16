@@ -34,6 +34,7 @@
         libappindicator-gtk3
         unrar
         tesseract
+        haruna
       ];
 
       kpkgs = with pkgs.kdePackages; [

@@ -1,7 +1,8 @@
 { self, inputs, ... }: {
- flake.nixosModules.pcHardwareConfig = { config, lib, pkgs, modulesPath, ... }: {
+ flake.nixosModules.pcHardwareConfig = { pkgs, config, lib, modulesPath, ... }: {
     imports = [
       (modulesPath + "/installer/scan/not-detected.nix")
+      inputs.chaotic.nixosModules.default
     ];
 
     console.earlySetup = false;
@@ -14,7 +15,7 @@
     boot.extraModulePackages = [ ];
     boot.blacklistedKernelModules = [ "nouveau" ];
     boot.kernelParams = [ "quiet" "splash" "nvidia.NVreg_EnableGpuFirmware=0" "nvidia-drm.modeset=1" "loglevel=3" "boot.shell_on_fail" "udev.log_priority=3""systemd.show_status=auto" "rd.systemd.show_status=auto" "amd_pstate=active"];
-    boot.kernelPackages = pkgs.linuxPackages_latest;
+    boot.kernelPackages = pkgs.linuxPackages_cachyos-rc;
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.systemd-boot.configurationLimit = 5;
@@ -36,12 +37,12 @@
 
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
+    hardware.nvidia.package = pkgs.nvidia_cachyos-rc;
     hardware.nvidia.open = true;
     hardware.nvidia.modesetting.enable = true;
     hardware.nvidia.powerManagement.enable = false;
     hardware.nvidia.powerManagement.finegrained = false;
     hardware.nvidia.forceFullCompositionPipeline = false;
-    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
     hardware.logitech.wireless.enable = true;
     hardware.keyboard.qmk.keychronSupport = true;
 
@@ -50,6 +51,7 @@
     hardware.enableAllFirmware = true;
 
     services.xserver.videoDrivers = [ "nvidia" ];
+    services.scx.enable = true;
 
     networking.hostName = "pc";
     networking.networkmanager.wifi.powersave = false;

@@ -15,6 +15,7 @@
       gdb
       lldb
       bingrep
+      scanmem
     ];
   };
 }

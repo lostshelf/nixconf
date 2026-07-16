@@ -12,6 +12,7 @@
       ungoogled-chromium
 
       blender
+      gimp
 
       texliveMedium
       texstudio
@@ -23,6 +24,9 @@
       hunspell
       hunspellDicts.en_CA
       hunspellDicts.de_DE
+
+      tidal-hifi
+      easyeffects
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {

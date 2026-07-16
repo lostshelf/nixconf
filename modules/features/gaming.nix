@@ -20,6 +20,7 @@
       protontricks.enable = true;
       package = pkgs.steam.override {
         extraPkgs = pkgs: with pkgs; [
+          proton-cachyos
           gamescope
           gamemode
           libxcursor
@@ -48,6 +49,11 @@
       wineWow64Packages.waylandFull
       unixbench
       geekbench
+      ryubing
+      rpcs3
+      winetricks
+      bottles
+      umu-launcher
     ];
 
     # Add `PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/wivrn/comp_ipc %command%` to launch options of VR game
