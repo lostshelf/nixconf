@@ -128,7 +128,6 @@
         ".config/krunnerrc"
         ".config/kwinrulesrc"
         ".config/kwinoutputconfig.json"
-        ".config/spectaclerc"
         ".config/powermanagementprofilesrc"
         ".config/baloofileinformationrc"
         ".config/baloofilerc"
@@ -147,7 +146,6 @@
         ".config/konsolerc"
         ".config/partitionmanagerrc"
         ".config/powermanagementprofilesrc"
-        ".config/spectaclerc"
         ".config/konsolesshconfig"
      ];
     };
