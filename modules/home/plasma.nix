@@ -624,7 +624,7 @@
         memoryUsage = "Aggressive";
       };
     };
-    programs.spectacle.shortcuts = {
+    programs.plasma.spectacle.shortcuts = {
       captureRectangularRegion = [ "Print" "Meta+Shift+S" ];
     };
     programs.plasma.configFile."spectaclerc" = {
