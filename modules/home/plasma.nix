@@ -97,16 +97,23 @@
             }
             {
               systemMonitor = {
+                showLegend = false;
+                displayStyle = "org.kde.ksysguard.horizontalBars";
                 sensors = [
                   {
-                    name = "gpu/gpu1/usage";
-                    color = "180,190,254";
+                    name = "cpu/all/usage";
+                    color = "170,0,0";
+                    label = "CPU %";
+                  }
+                  {
+                    name = "gpu/gpu0/usage";
+                    color = "61,63,233";
                     label = "GPU %";
                   }
                   {
-                    name = "cpu/all/usage";
-                    color = "180,190,254";
-                    label = "CPU %";
+                    name = "memory/physical/usedPercent";
+                    color = "61,177,233";
+                    label = "RAM %";
                   }
                 ];
               };
