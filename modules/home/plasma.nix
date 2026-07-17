@@ -98,7 +98,7 @@
             {
               systemMonitor = {
                 showLegend = false;
-                displayStyle = "org.kde.ksysguard.horizontalBars";
+                displayStyle = "org.kde.ksysguard.horizontalbars";
                 sensors = [
                   {
                     name = "cpu/all/usage";
