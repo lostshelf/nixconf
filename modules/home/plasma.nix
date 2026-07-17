@@ -67,12 +67,12 @@
         commands = {
           clipShort = {
             name = "Clip 60s";
-            key = "Ctrl+~";
+            key = "Ctrl+`";
             command = "${pkgs.procps}/bin/pkill -SIGRTMIN+3 -f /.wrapped/gpu-screen-recorder";
           };
           clipLong = {
             name = "Clip 5m";
-            key = "Alt+~";
+            key = "Alt+`";
             command = "${pkgs.procps}/bin/pkill -SIGRTMIN+4 -f /.wrapped/gpu-screen-recorder";
           };
         };
@@ -97,9 +97,10 @@
                 launchers = [
                   "applications:firefox.desktop"
                   "applications:discord-canary.desktop"
+                  "applications:vesktop.desktop"
                   "applications:org.kde.dolphin.desktop"
                   "applications:org.kde.konsole.desktop"
-                  "applications:kdesystemsettings.desktop"
+                  "applications:systemsettings.desktop"
                   "applications:steam.desktop"
                 ];
               };
@@ -207,6 +208,10 @@
       ];
 
       shortcuts = {
+        "services/plasma-manager-commands.desktop" = {
+          clipShort = "Ctrl+`";
+          clipLong = "Alt+`";
+        };
         ActivityManager.switch-to-activity-790474b2-8553-4f1d-823a-ca179b01e23d = [ ];
         "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
         "KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Meta+Alt+K";
