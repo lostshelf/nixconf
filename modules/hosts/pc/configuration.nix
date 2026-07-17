@@ -72,6 +72,8 @@
       scrcpy
       tailscale
       tmux
+      ffmpeg
+      libnotify
     ];
 
     programs.nix-index-database.comma.enable = true;
@@ -120,6 +122,14 @@
     services.flatpak.enable = true;
     services.printing.enable = true;
     services.fwupd.enable = true;
+
+    systemd.services.clipping = {
+      enable = true;
+      serviceConfig = {
+        ExecStart = "gpu-screen-recorder -w \"DP-2;width=1920;height=1080;halign=center;valign=center\" -c mkv -s 1920x1080 -f 30 -cursor yes -a \"alsa_input.usb-HP__Inc_HyperX_Cloud_III_Wireless_0000000000000000-00.mono-fallback|alsa_output.usb-HP__Inc_HyperX_Cloud_III_Wireless_0000000000000000-00.analog-stereo.monitor\" -k hevc_10bit -bm cbr -q 10000 -cr full -tune quality -r 300 -replay-storage ram -df yes -restart-replay-on-save yes -o /home/hadif/Videos/Clips"
+;
+      };
+    };
 
     virtualisation.spiceUSBRedirection.enable = true;
     virtualisation.libvirtd = {
