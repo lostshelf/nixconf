@@ -74,6 +74,7 @@
       tmux
       ffmpeg
       libnotify
+      toybox
     ];
 
     programs.nix-index-database.comma.enable = true;
