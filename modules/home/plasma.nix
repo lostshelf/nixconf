@@ -208,6 +208,21 @@
         }
       ];
 
+      configFile.kwinrc."Effect-MouseMark" = {
+        "LineWidth" = 3;
+        "Color" = "128,128,255";
+
+        "Freedrawmeta"     = true;
+        "Freedrawcontrol"  = true;
+        "Freedrawalt"      = false;
+        "Freedrawshift"    = false;
+
+        "Arrowdrawmeta"    = true;
+        "Arrowdrawcontrol" = true;
+        "Arrowdrawalt"     = true;
+        "Arrowdrawshift"   = false;
+      };
+
       shortcuts = {
         "services/plasma-manager-commands.desktop" = {
           clipShort = "Ctrl+`";
@@ -234,6 +249,8 @@
         ksmserver.Reboot = [ ];
         ksmserver."Reboot Without Confirmation" = [ ];
         ksmserver."Shut Down" = [ ];
+        kwin."ClearMouseMarks" = "Meta+Shift+z";
+        kwin."ClearLastMouseMark" = "Meta+Shift+c";
         kwin."Activate Window Demanding Attention" = "Meta+Ctrl+A";
         kwin."Cycle Overview" = [ ];
         kwin."Cycle Overview Opposite" = [ ];
@@ -483,14 +500,9 @@
         kwinrulesrc.General.rules = "";
         plasma-localerc.Formats.LANG = "en_US.UTF-8";
         plasmanotifyrc."Applications/firefox".Seen = true;
+        kwinrc.Plugins.mousemarkEnabled = true;
       };
       dataFile = {
-        "kate/anonymous.katesession"."Document 0".URL = "file:///home/hadif/Documents/nixos_new/modules/features/discord.nix";
-        "kate/anonymous.katesession"."Document 1".URL = "file:///home/hadif/Documents/nixos_new/modules/hosts/pc/configuration.nix";
-        "kate/anonymous.katesession"."Document 2".URL = "file:///home/hadif/Documents/nixos_new/modules/home/home.nix";
-        "kate/anonymous.katesession"."Document 3".URL = "file:///home/hadif/Documents/nixos_new/modules/home/plasma.nix";
-        "kate/anonymous.katesession"."Document 4".URL = "file:///home/hadif/Documents/nixos_new/modules/preservation.nix";
-        "kate/anonymous.katesession"."Document 5".URL = "file:///home/hadif/Documents/nixos_new/output.txt";
         "kate/anonymous.katesession"."Kate Plugins".bookmarksplugin = false;
         "kate/anonymous.katesession"."Kate Plugins".cmaketoolsplugin = false;
         "kate/anonymous.katesession"."Kate Plugins".compilerexplorer = false;
