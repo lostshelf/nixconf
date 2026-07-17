@@ -42,8 +42,8 @@
       kwin = {
         effects = {
           shakeCursor.enable = false;
-          translucency.enable = true;
-          blur.enable = true;
+          translucency.enable = false;
+          blur.enable = false;
           hideCursor.enable = false;
           zoom.enable = false;
           magnifier.enable = false;
