@@ -63,6 +63,20 @@
         historyBehavior = "enableAutoComplete";
         shortcuts.launch = "Meta+Space";
       };
+      hotkeys = {
+        commands = {
+          clipShort = {
+            name = "Clip 60s";
+            key = "Ctrl+~";
+            command = "pkill -SIGRTMIN+3 -f \"^gpu-screen-recorder\"";
+          };
+          clipLong = {
+            name = "Clip 5m";
+            key = "Alt+~";
+            command = "pkill -SIGRTMIN+4 -f \"^gpu-screen-recorder\"";
+          };
+        };
+      };
       panels = [
         {
           location = "bottom";
