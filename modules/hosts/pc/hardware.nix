@@ -15,7 +15,7 @@
     boot.extraModulePackages = [ ];
     boot.blacklistedKernelModules = [ "nouveau" ];
     boot.kernelParams = [ "quiet" "splash" "nvidia.NVreg_EnableGpuFirmware=0" "nvidia-drm.modeset=1" "loglevel=3" "boot.shell_on_fail" "udev.log_priority=3""systemd.show_status=auto" "rd.systemd.show_status=auto" "amd_pstate=active"];
-    boot.kernelPackages = pkgs.linuxPackages_cachyos-rc;
+    boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.systemd-boot.configurationLimit = 5;
@@ -37,7 +37,7 @@
 
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
-    hardware.nvidia.package = pkgs.nvidia_cachyos-rc;
+    hardware.nvidia.package = pkgs.nvidia_cachyos;
     hardware.nvidia.open = true;
     hardware.nvidia.modesetting.enable = true;
     hardware.nvidia.powerManagement.enable = false;

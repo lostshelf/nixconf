@@ -71,6 +71,7 @@
       droidcam
       scrcpy
       tailscale
+      tmux
     ];
 
     programs.nix-index-database.comma.enable = true;

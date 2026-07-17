@@ -27,6 +27,8 @@
 
       tidal-hifi
       easyeffects
+
+      waydroid
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {

@@ -6,6 +6,8 @@
       godot
 
       devenv
+
+      distrobox
     ];
 
     nixpkgs.config.android_sdk.accept_license = true;
