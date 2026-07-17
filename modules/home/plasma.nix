@@ -68,12 +68,12 @@
           clipShort = {
             name = "Clip 60s";
             key = "Ctrl+~";
-            command = "pkill -SIGRTMIN+3 -f /.wrapped/gpu-screen-recorder";
+            command = "${pkgs.procps}/bin/pkill -SIGRTMIN+3 -f /.wrapped/gpu-screen-recorder";
           };
           clipLong = {
             name = "Clip 5m";
             key = "Alt+~";
-            command = "pkill -SIGRTMIN+4 -f /.wrapped/gpu-screen-recorder";
+            command = "${pkgs.procps}/bin/pkill -SIGRTMIN+4 -f /.wrapped/gpu-screen-recorder";
           };
         };
       };
