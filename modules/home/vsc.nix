@@ -10,7 +10,6 @@
         formulahendry.code-runner
         ms-azuretools.vscode-containers
         ms-python.python
-        cpptools-extension-pack
         ms-vscode.hexeditor
         ms-vscode.live-server
         ms-vscode.cmake-tools
