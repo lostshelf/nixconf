@@ -56,6 +56,8 @@
 
             ".var/app"
             ".local/share/flatpak"
+
+            ".config/Code"
           ];
 
           files = [
