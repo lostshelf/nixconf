@@ -29,6 +29,11 @@
       easyeffects
 
       waydroid
+      waydroid-helper
+
+      whatsie
+
+      varia
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {

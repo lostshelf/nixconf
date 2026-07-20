@@ -6,6 +6,16 @@
     xdg.portal.enable = true;
     xdg.portal.extraPortals = with pkgs.kdePackages; [ xdg-desktop-portal-kde ];
     xdg.portal.config.common.default = "kde";
+    xdg.mime = {
+      enable = true;
+      defaultApplications = {
+        "text/html" = "firefox.desktop";
+        "x-scheme-handler/http" = "firefox.desktop";
+        "x-scheme-handler/https" = "firefox.desktop";
+        "x-scheme-handler/about" = "firefox.desktop";
+        "x-scheme-handler/unknown" = "firefox.desktop";
+      };
+    };
 
     environment.sessionVariables = {
       GTK_USE_PORTAL = "1";
@@ -87,7 +97,6 @@
         kio-zeroconf
         kio-fuse
         kgpg
-        kget
         kfind
         kdesdk-thumbnailers
         kdeconnect-kde

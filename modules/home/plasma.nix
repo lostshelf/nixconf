@@ -662,5 +662,6 @@
     programs.plasma.configFile."spectaclerc" = {
 
     };
+    programs.plasma.configFile.kdeglobals.General.BrowserApplication = "firefox.desktop";
   };
 }

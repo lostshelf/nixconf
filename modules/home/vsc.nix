@@ -20,6 +20,7 @@
         ms-vscode.cpptools-extension-pack
         ms-vscode-remote.remote-containers
         ms-vscode-remote.vscode-remote-extensionpack
+        fill-labs.dependi
       ];
     };
   };
