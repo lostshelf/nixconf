@@ -54,6 +54,8 @@
       winetricks
       bottles
       umu-launcher
+      eden
+      tkmm
     ];
 
     # Add `PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/wivrn/comp_ipc %command%` to launch options of VR game
