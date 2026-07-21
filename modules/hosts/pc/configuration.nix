@@ -25,6 +25,9 @@
 
     networking.hostName = "pc";
     networking.networkmanager.enable = true;
+    networking.networkmanager.wifi.powersave = false;
+
+    security.rtkit.enable = true;
 
     time.timeZone = "America/Edmonton";
     i18n.defaultLocale = "en_CA.UTF-8";
@@ -60,7 +63,7 @@
     users.users.hadif = {
       isNormalUser = true;
       description = "Hadi Faraz";
-      extraGroups = [ "wheel" "networkmanager" "dialout" "docker" "i2c" "flatpak" "video" "render" "input" "uinput" "gamemode" ];
+      extraGroups = [ "wheel" "networkmanager" "dialout" "docker" "i2c" "flatpak" "video" "render" "input" "uinput" "gamemode" "lpadmin" "scanner" "lp" ];
       hashedPassword = "$y$j9T$MMPAhWeSbaZ7zbfOs0U9t.$nD7OM/BMkvgM5HYL6SpwN5HiTd6CtfDxYCxb583rbP9";
       shell = pkgs.fish;
     };
@@ -76,6 +79,10 @@
       libnotify
       toybox
     ];
+
+    environment.sessionVariables = {
+      GIT_ASKPASS = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
+    };
 
     programs.nix-index-database.comma.enable = true;
 
@@ -123,6 +130,57 @@
     services.flatpak.enable = true;
     services.printing.enable = true;
     services.fwupd.enable = true;
+    services.ipp-usb.enable = true;
+    services.udev.packages = [ pkgs.sane-airscan ];
+
+    services.avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+
+    services.printing = {
+      drivers = with pkgs; [
+        brlaser
+        cups-filters
+        cups-browsed
+      ];
+    };
+
+    services.pipewire = {
+      enable = true;
+
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+
+      raopOpenFirewall = true;
+
+      extraConfig.pipewire = {
+        "10-airplay" = {
+          "context.modules" = [
+            {
+              name = "libpipewire-module-raop-discover";
+
+              # increase the buffer size if you get dropouts/glitches
+              # args = {
+              #   "raop.latency.ms" = 500;
+              # };
+            }
+          ];
+        };
+
+        "92-low-latency" = {
+          "context.properties" = {
+            "default.clock.rate" = 48000;
+            "default.clock.quantum" = 32;
+            "default.clock.min-quantum" = 32;
+            "default.clock.max-quantum" = 32;
+          };
+        };
+      };
+    };
 
     systemd.user.services.start-clipping = {
       enable = true;

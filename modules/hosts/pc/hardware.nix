@@ -32,8 +32,18 @@
 
     hardware.bluetooth.enable = true;
     hardware.bluetooth.powerOnBoot = true;
+    hardware.bluetooth.settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+        Experimental = true;
+      };
+    };
 
     hardware.i2c.enable = true;
+
+    hardware.sane.enable = true;
+    hardware.sane.disabledDefaultBackends = [ "escl" ];
+    hardware.sane.extraBackends = [ pkgs.sane-airscan ];
 
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
