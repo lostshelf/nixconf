@@ -15,6 +15,8 @@
         plasmaConfig
         gitConfig
         vscConfig
+        miscConfig
+        shellConfig
       ];
     };
   };

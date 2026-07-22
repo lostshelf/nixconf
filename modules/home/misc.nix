@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.homeModules.gitConfig = { pkgs, ... }: {
+  flake.homeModules.miscConfig = { pkgs, ... }: {
     services.mpris-proxy.enable = true;
   };
 }
