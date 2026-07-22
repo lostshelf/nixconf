@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.homeModules.gitConfig = { pkgs, ... }: {
+  flake.homeModules.shellConfig = { pkgs, ... }: {
     programs.fish.enable = true;
 
     programs.zoxide = {
