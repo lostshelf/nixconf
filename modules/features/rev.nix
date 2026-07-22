@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.devConfig = { pkgs, lib, config, ... }: {
+  flake.nixosModules.revConfig = { pkgs, lib, config, ... }: {
     environment.systemPackages = with pkgs; [
       ghidra-bin
       frida-tools

@@ -14,7 +14,7 @@
     boot.kernelModules = [ "kvm-amd" ];
     boot.extraModulePackages = [ ];
     boot.blacklistedKernelModules = [ "nouveau" ];
-    boot.kernelParams = [ "quiet" "splash" "nvidia.NVreg_EnableGpuFirmware=0" "nvidia-drm.modeset=1" "loglevel=3" "boot.shell_on_fail" "udev.log_priority=3""systemd.show_status=auto" "rd.systemd.show_status=auto" "amd_pstate=active"];
+    boot.kernelParams = [ "quiet" "splash" "nvidia-drm.modeset=1" "loglevel=3" "boot.shell_on_fail" "udev.log_priority=3""systemd.show_status=auto" "rd.systemd.show_status=auto" "amd_pstate=active"];
     boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
     boot.loader.systemd-boot.enable = true;
@@ -47,12 +47,14 @@
 
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
+
     hardware.nvidia.package = pkgs.nvidia_cachyos;
     hardware.nvidia.open = true;
     hardware.nvidia.modesetting.enable = true;
-    hardware.nvidia.powerManagement.enable = false;
+    hardware.nvidia.powerManagement.enable = true;
     hardware.nvidia.powerManagement.finegrained = false;
     hardware.nvidia.forceFullCompositionPipeline = false;
+
     hardware.logitech.wireless.enable = true;
     hardware.keyboard.qmk.keychronSupport = true;
 
@@ -61,7 +63,9 @@
     hardware.enableAllFirmware = true;
 
     services.xserver.videoDrivers = [ "nvidia" ];
+
     services.scx.enable = true;
+    services.scx.scheduler = "scx_lavd";
 
     networking.hostName = "pc";
     networking.networkmanager.wifi.powersave = false;

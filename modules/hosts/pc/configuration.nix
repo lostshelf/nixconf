@@ -17,6 +17,9 @@
       self.nixosModules.gaming
       self.nixosModules.apps
 
+      self.nixosModules.devConfig
+      self.nixosModules.revConfig
+
     ];
 
     boot.plymouth.enable = true;
@@ -78,6 +81,7 @@
       ffmpeg
       libnotify
       toybox
+      solaar
     ];
 
     environment.sessionVariables = {
