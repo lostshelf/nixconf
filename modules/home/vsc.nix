@@ -29,7 +29,7 @@
         christian-kohler.npm-intellisense
         ecmel.vscode-html-css
         vadimcn.vscode-lldb
-      ]) ++ (with ovsxFixed; [
+      ]) ++ (with ovsxFixed.open-vsx; [
         nromanov.dotrush
         rust-lang.rust-analyzer
         fill-labs.dependi
