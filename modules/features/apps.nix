@@ -13,6 +13,17 @@
 
       blender
       gimp
+      krita
+      tenacity
+      aseprite
+
+      freecad
+      logisim-evolution
+      kicad
+
+      anki
+
+      celestia
 
       texliveMedium
       texstudio
@@ -36,6 +47,11 @@
       varia
 
       qbittorrent-enhanced
+
+      virt-manager
+      quickemu
+
+      openrgb
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {

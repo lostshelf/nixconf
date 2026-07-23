@@ -45,6 +45,8 @@
         unrar
         tesseract
         haruna
+        rsibreak
+        kdiskmark
       ];
 
       kpkgs = with pkgs.kdePackages; [
@@ -101,6 +103,7 @@
         kdesdk-thumbnailers
         kdeconnect-kde
         kamera
+        kamoso
         kalarm
         kactivitymanagerd
         kaccounts-integration

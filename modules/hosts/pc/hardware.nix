@@ -62,6 +62,8 @@
 
     hardware.enableAllFirmware = true;
 
+    services.hardware.openrgb.enable;
+
     services.xserver.videoDrivers = [ "nvidia" ];
 
     services.scx.enable = true;
