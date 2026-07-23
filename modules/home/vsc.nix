@@ -19,16 +19,16 @@
         ms-vscode.remote-explorer
         ms-vscode-remote.remote-ssh
         ms-vscode-remote.remote-ssh-edit
-        ms-vscode.cpptools
-        ms-vscode.cpptools-extension-pack
         ms-vscode-remote.remote-containers
-        ms-vscode-remote.vscode-remote-extensionpack
         jnoortheen.nix-ide
         nimlang.nimlang
         haskell.haskell
         christian-kohler.npm-intellisense
         ecmel.vscode-html-css
         vadimcn.vscode-lldb
+        mkhl.direnv
+        editorconfig.editorconfig
+        usernamehw.errorlens
       ]) ++ (with ovsxFixed.open-vsx; [
         nromanov.dotrush
         rust-lang.rust-analyzer
@@ -37,7 +37,11 @@
         ms-python.python
         llvm-vs-code-extensions.vscode-clangd
         tamasfe.even-better-toml
+        charliermarsh.ruff
       ]);
+      profiles.default.userSettings = {
+        # Add user settings here as key-value pairs
+      };
     };
   };
 }
