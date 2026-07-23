@@ -27,8 +27,8 @@
     programs.vscodium = {
       enable = true;
       package = pkgs.vscodium-fhs;
-      profiles.enableUpdateCheck = false;
-      profiles.enableExtensionUpdateCheck = false;
+      profiles.default.enableUpdateCheck = false;
+      profiles.default.enableExtensionUpdateCheck = false;
       profiles.default.extensions = with pkgs.vscode-extensions; [
         rust-lang.rust-analyzer
         tamasfe.even-better-toml
