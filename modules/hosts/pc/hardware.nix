@@ -62,7 +62,7 @@
 
     hardware.enableAllFirmware = true;
 
-    services.hardware.openrgb.enable;
+    services.hardware.openrgb.enable = true;
 
     services.xserver.videoDrivers = [ "nvidia" ];
 
