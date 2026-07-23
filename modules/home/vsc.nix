@@ -1,5 +1,7 @@
 { self, inputs, ... }: {
-  flake.homeModules.vscConfig = { pkgs, ... }: {
+  flake.homeModules.vscConfig = { pkgs, ... }: let
+    ovsxFixed = pkgs.nix-vscode-extensions.open-vsx.usingFixesFrom pkgs;
+  in {
     programs.vscodium = {
       enable = true;
       package = pkgs.vscodium-fhs;
