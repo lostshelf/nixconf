@@ -16,11 +16,11 @@
       localNetworkGameTransfers.openFirewall = true;
       extraCompatPackages = with pkgs; [
         proton-ge-bin
+        proton-cachyos
       ];
       protontricks.enable = true;
       package = pkgs.steam.override {
         extraPkgs = pkgs: with pkgs; [
-          proton-cachyos
           gamescope
           gamemode
           libxcursor
