@@ -34,6 +34,8 @@
       whatsie
 
       varia
+
+      qbittorrent-enhanced
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {

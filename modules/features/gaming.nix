@@ -39,6 +39,7 @@
 
     environment.systemPackages = with pkgs; [
       protonup-qt
+      protonplus
       lutris
       steam-run
       dxvk
@@ -82,6 +83,8 @@
         ".local/share/Terraria"
         ".config/r2modmanPlus-local"
         ".local/share/monado"
+        ".steam"
+        ".cache/nv_shader_cache"
       ];
     };
   };
