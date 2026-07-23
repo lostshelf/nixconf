@@ -7,5 +7,9 @@
 #     nix.gc.automatic = lib.mkDefault true;
 #     nix.gc.dates = lib.mkDefault "weekly";
 #     nix.gc.options = lib.mkDefault "--delete-older-than 7d";
+
+    nixpkgs.overlays = [
+      inputs.nix-vscode-extensions.overlays.default
+    ];
   };
 }

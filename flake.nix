@@ -24,6 +24,8 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
+
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
