@@ -15,7 +15,6 @@
       gimp
       krita
       tenacity
-      aseprite
 
       freecad
       logisim-evolution
