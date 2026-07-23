@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
   flake.homeModules.vscConfig = { pkgs, ... }: let
-    ovsxFixed = pkgs.nix-vscode-extensions.open-vsx.usingFixesFrom pkgs;
+    ovsxFixed = pkgs.nix-vscode-extensions.usingFixesFrom pkgs;
   in {
     programs.vscodium = {
       enable = true;
