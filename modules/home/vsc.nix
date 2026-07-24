@@ -5,26 +5,28 @@
     programs.vscodium = {
       enable = true;
       package = pkgs.vscodium.fhsWithPackages (ps: with ps; [
-        pkg-config
+        git
         rustup
-        zlib
         python3
         nim
         nimble
         go
         lldb
-        clang
-        gcc
-        gnumake
-        cmake
-        openssl
-        gdb
+        zlib
+
+        direnv
+        devenv
+        nil
+        clang-tools
+        ruff
+        dotnet-sdk
+
         ghc
         cabal-install
-        docker
+
         openssh
-        nodejs
-        nimlsp
+        docker
+
         texlive.combined.scheme-medium
       ]);
       profiles.default.enableUpdateCheck = false;
