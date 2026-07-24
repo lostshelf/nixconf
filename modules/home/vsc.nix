@@ -38,6 +38,7 @@
         llvm-vs-code-extensions.vscode-clangd
         tamasfe.even-better-toml
         charliermarsh.ruff
+        datakurre.devenv
       ]);
       profiles.default.userSettings = {
         # Add user settings here as key-value pairs
