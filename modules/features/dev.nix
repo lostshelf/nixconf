@@ -15,5 +15,10 @@
     ];
 
     nixpkgs.config.android_sdk.accept_license = true;
+
+    programs.devenv = {
+      enable = true;
+      enableFishIntegration = true;
+    };
   };
 }
