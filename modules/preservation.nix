@@ -61,7 +61,7 @@
           ];
 
           files = [
-
+            ".config/nix/nix.conf"
           ];
         };
       };
