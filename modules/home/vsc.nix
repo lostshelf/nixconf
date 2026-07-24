@@ -28,6 +28,12 @@
         docker
 
         texlive.combined.scheme-medium
+
+        jdk21
+        maven
+        gradle
+
+        dotnet-sdk
       ]);
       profiles.default.enableUpdateCheck = false;
       profiles.default.enableExtensionUpdateCheck = false;
@@ -44,6 +50,7 @@
         ms-vscode-remote.remote-ssh
         ms-vscode-remote.remote-ssh-edit
         ms-vscode-remote.remote-containers
+        ms-dotnettools.csharp
         jnoortheen.nix-ide
         nimlang.nimlang
         haskell.haskell
@@ -53,6 +60,10 @@
         mkhl.direnv
         editorconfig.editorconfig
         usernamehw.errorlens
+        vscjava.vscode-java-debug
+        vscjava.vscode-maven
+        vscjava.vscode-gradle
+        vscjava.vscode-java-dependency
       ]) ++ (with ovsxFixed.open-vsx; [
         nromanov.dotrush
         rust-lang.rust-analyzer
