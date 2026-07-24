@@ -2,7 +2,7 @@
   flake.homeModules.vscConfig = { pkgs, ... }: let
     ovsxFixed = pkgs.nix-vscode-extensions.usingFixesFrom pkgs;
   in {
-    programs.vscode = {
+    programs.vscodium = {
       enable = true;
       package = pkgs.vscodium.fhsWithPackages (ps: with ps; [ rustup zlib ]);
       profiles.default.enableUpdateCheck = false;
