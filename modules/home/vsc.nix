@@ -4,7 +4,29 @@
   in {
     programs.vscodium = {
       enable = true;
-      package = pkgs.vscodium.fhsWithPackages (ps: with ps; [ rustup zlib ]);
+      package = pkgs.vscodium.fhsWithPackages (ps: with ps; [
+        pkg-config
+        rustup
+        zlib
+        python3
+        nim
+        nimble
+        go
+        lldb
+        clang
+        gcc
+        gnumake
+        cmake
+        openssl
+        gdb
+        ghc
+        cabal-install
+        docker
+        openssh
+        nodejs
+        nimlsp
+        texlive.combined.scheme-medium
+      ]);
       profiles.default.enableUpdateCheck = false;
       profiles.default.enableExtensionUpdateCheck = false;
       profiles.default.extensions = (with pkgs.vscode-extensions; [
