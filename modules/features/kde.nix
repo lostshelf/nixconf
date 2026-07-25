@@ -47,10 +47,10 @@
         haruna
         rsibreak
         kdiskmark
-        kwave
       ];
 
       kpkgs = with pkgs.kdePackages; [
+        kwave
         dolphin-plugins
         kdegraphics-thumbnailers
         kcharselect
