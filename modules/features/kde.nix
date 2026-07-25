@@ -47,6 +47,7 @@
         haruna
         rsibreak
         kdiskmark
+        kwave
       ];
 
       kpkgs = with pkgs.kdePackages; [

@@ -14,17 +14,10 @@
       blender
       gimp
       krita
-      tenacity
+      
+      pixelorama
 
-      freecad
-      logisim-evolution
-      kicad
-
-      anki
-
-      celestia
-
-      texliveMedium
+      texliveFull
       texstudio
 
       libreoffice-qt-fresh
