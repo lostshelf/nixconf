@@ -7,6 +7,7 @@
 
       preserveAt."/persistent" = {
         directories = [
+          { directory = "/var/lib/sbctl"; inInitrd = true; }
           "/var/log"
           "/var/lib/nixos"
           "/var/lib/AccountsService/icons"
@@ -24,7 +25,6 @@
           }
           "/etc/nixos"
           "/var/lib/bluetooth"
-          "/etc/NetworkManager/system-connections"
           { directory = "/var/lib/nixos"; inInitrd = true; }
         ];
 

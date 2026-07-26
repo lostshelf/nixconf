@@ -1,6 +1,7 @@
 { self, inputs, ... }: {
   flake.nixosModules.pcConfig = { pkgs, lib, config,  ... }: {
     imports = [
+      inputs.lanzaboote.nixosModules.lanzaboote
       inputs.nix-index-database.nixosModules.default
 
       self.nixosModules.nixConfig
@@ -23,7 +24,7 @@
     ];
 
     boot.plymouth.enable = true;
-    boot.loader.systemd-boot.enable = true;
+    boot.loader.systemd-boot.enable = lib.mkForce false;
     boot.loader.efi.canTouchEfiVariables = true;
 
     networking.hostName = "pc";
@@ -82,6 +83,7 @@
       libnotify
       toybox
       solaar
+      sbctl
     ];
 
     environment.sessionVariables = {
