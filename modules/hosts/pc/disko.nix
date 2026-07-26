@@ -93,21 +93,9 @@
       };
     };
 
-    disko.devices.disk."Storage3" = {
-      device = "/dev/nvme3n1";
-      type = "disk";
-
-      content = {
-        type = "filesystem";
-        format = "ext4";
-        mountpoint = "/mnt/Storage3";
-      };
-    };
-
       systemd.tmpfiles.rules = [
         "d /mnt/Storage1 0755 hadif users - -"
         "d /mnt/Storage2 0755 hadif users - -"
-        "d /mnt/Storage3 0755 hadif users - -"
       ];
   };
 }

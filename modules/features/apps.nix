@@ -44,6 +44,8 @@
       quickemu
 
       openrgb
+
+      ventoy-full-qt
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {
