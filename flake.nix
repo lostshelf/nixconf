@@ -31,6 +31,8 @@
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

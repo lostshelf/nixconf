@@ -34,6 +34,7 @@
     boot.kernel.sysctl = {
       "vm.vfs_cache_pressure" = 50;
       "vm.swappiness" = 10;
+      "vm.max_map_count" = lib.mkDefault 2147483642;
     };
 
     hardware.bluetooth.enable = true;

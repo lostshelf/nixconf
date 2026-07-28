@@ -1,6 +1,9 @@
 { self, inputs, ... }: {
   flake.nixosModules.apps = { pkgs, ... }: {
-    imports = [ inputs.preservation.nixosModules.preservation ];
+    imports = [
+      inputs.preservation.nixosModules.preservation
+      inputs.nix-flatpak.nixosModules.nix-flatpak
+    ];
 
     environment.systemPackages = with pkgs; [
       discord-canary
@@ -44,6 +47,11 @@
       quickemu
 
       openrgb
+    ];
+
+    services.flatpak.packages = [
+      "org.vinegarhq.Sober"
+      "com.vysp3r.ProtonPlus"
     ];
 
     preservation.preserveAt."/persistent".users.hadif = {
