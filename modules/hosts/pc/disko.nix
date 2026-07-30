@@ -16,7 +16,7 @@
     };
 
     disko.devices.disk.main = {
-      device = "/dev/nvme0n1";
+      device = "/dev/disk/by-id/nvme-WD_BLACK_SN850X_2000GB_24021W801007";
       type = "disk";
 
       content.type = "gpt";
@@ -72,24 +72,48 @@
     };
 
     disko.devices.disk."Storage1" = {
-      device = "/dev/nvme1n1";
+      device = "/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_with_Heatsink_4TB_S7DSNJ0Y502069A";
       type = "disk";
 
       content = {
-        type = "filesystem";
-        format = "ext4";
-        mountpoint = "/mnt/Storage1";
+        type = "gpt";
+        partitions.primary = {
+          size = "100%";
+          content = {
+            type = "btrfs";
+            extraArgs = [ "-f" ];
+
+            subvolumes = {
+              "/storage1" = {
+                mountOptions = [ "subvol=storage1" "noatime" "compress=zstd" ];
+                mountpoint = "/mnt/Storage1";
+              };
+            };
+          };
+        };
       };
     };
 
     disko.devices.disk."Storage2" = {
-      device = "/dev/nvme2n1";
+      device = "/dev/disk/by-id/nvme-CT4000P3PSSD8_2402E88D36DE";
       type = "disk";
 
       content = {
-        type = "filesystem";
-        format = "ext4";
-        mountpoint = "/mnt/Storage2";
+        type = "gpt";
+        partitions.primary = {
+          size = "100%";
+          content = {
+            type = "btrfs";
+            extraArgs = [ "-f" ];
+
+            subvolumes = {
+              "/storage2" = {
+                mountOptions = [ "subvol=storage2" "noatime" "compress=zstd" ];
+                mountpoint = "/mnt/Storage2";
+              };
+            };
+          };
+        };
       };
     };
 
