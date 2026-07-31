@@ -64,6 +64,7 @@
         vscjava.vscode-maven
         vscjava.vscode-gradle
         vscjava.vscode-java-dependency
+        editorconfig.editorconfig
       ]) ++ (with ovsxFixed.open-vsx; [
         nromanov.dotrush
         rust-lang.rust-analyzer
