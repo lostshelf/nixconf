@@ -16,6 +16,7 @@
       lldb
       bingrep
       scanmem
+      pince
     ];
   };
 }
