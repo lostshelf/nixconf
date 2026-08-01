@@ -71,7 +71,7 @@
         asm-lsp
 
         nasm
-        
+
       ]);
       profiles.default.enableUpdateCheck = false;
       profiles.default.enableExtensionUpdateCheck = false;
@@ -103,6 +103,7 @@
         vscjava.vscode-java-dependency
         editorconfig.editorconfig
         dbaeumer.vscode-eslint
+        ms-vscode.js-debug
       ]) ++ (with ovsxFixed.open-vsx; [
         nromanov.dotrush
         rust-lang.rust-analyzer
