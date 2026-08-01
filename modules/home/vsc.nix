@@ -76,6 +76,10 @@
         nasm
 
         wrangler
+
+        pnpm
+
+        sonarlint-ls
       ]);
       profiles.default.enableUpdateCheck = false;
       profiles.default.enableExtensionUpdateCheck = false;
@@ -120,6 +124,9 @@
         tamasfe.even-better-toml
         charliermarsh.ruff
         datakurre.devenv
+        xabikos.JavaScriptSnippets
+        christian-kohler.npm-intellisense
+        SonarSource.sonarlint-vscode
       ]);
       profiles.default.userSettings = {
         # Add user settings here as key-value pairs
