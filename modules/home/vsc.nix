@@ -6,28 +6,36 @@
       enable = true;
       package = pkgs.vscodium.fhsWithPackages (ps: with ps; [
         git
-        rustup
-        python3
-        nim
-        nimble
-        go
+        openssh
+        docker
         lldb
         zlib
 
+        gcc
+        clang
+        clang-tools
+
         direnv
         devenv
+
+        rustup
+
+        python3
+
+        nim
+        nimble
+        
+        go
+
         nil
-        clang-tools
+        
         ruff
         dotnet-sdk
 
         ghc
         cabal-install
 
-        openssh
-        docker
-
-        texlive.combined.scheme-medium
+        texlive.combined.scheme-full
 
         jdk21
         maven
