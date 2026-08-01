@@ -19,6 +19,8 @@
         devenv
 
         rustup
+        rust-analyzer
+        cargo
 
         python3
 
@@ -26,6 +28,7 @@
         nimble
         
         go
+        gopls
 
         nil
         
@@ -40,8 +43,35 @@
         jdk21
         maven
         gradle
+        jdt-language-server
 
         dotnet-sdk
+
+        nodejs
+        typescript-language-server
+
+        luajitPackages.lua
+        luajitPackages.luarocks
+        luajitPackages.lua-lsp
+
+        yaml-language-server
+        
+        kotlin-language-server
+
+        ansible-language-server
+
+        tailwindcss-language-server
+
+        terraform-ls
+
+        glsl_analyzer
+
+        systemd-language-server
+
+        asm-lsp
+
+        nasm
+        
       ]);
       profiles.default.enableUpdateCheck = false;
       profiles.default.enableExtensionUpdateCheck = false;
@@ -72,6 +102,7 @@
         vscjava.vscode-gradle
         vscjava.vscode-java-dependency
         editorconfig.editorconfig
+        dbaeumer.vscode-eslint
       ]) ++ (with ovsxFixed.open-vsx; [
         nromanov.dotrush
         rust-lang.rust-analyzer
