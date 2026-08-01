@@ -47,39 +47,39 @@
 
         dotnet-sdk
 
-        nodejs
-        typescript-language-server
+        # nodejs
+        # typescript-language-server
 
-        luajitPackages.lua
-        luajitPackages.luarocks
-        luajitPackages.lua-lsp
+        # luajitPackages.lua
+        # luajitPackages.luarocks
+        # luajitPackages.lua-lsp
 
-        yaml-language-server
+        # yaml-language-server
         
-        kotlin
-        kotlin-language-server
+        # kotlin
+        # kotlin-language-server
 
-        ansible
-        ansible-language-server
+        # ansible
+        # ansible-language-server
 
-        tailwindcss-language-server
+        # tailwindcss-language-server
 
-        terraform
-        terraform-ls
+        # terraform
+        # terraform-ls
 
-        glsl_analyzer
+        # glsl_analyzer
 
-        systemd-language-server
+        # systemd-language-server
 
-        asm-lsp
+        # asm-lsp
 
-        nasm
+        # nasm
 
-        wrangler
+        # wrangler
 
-        pnpm
+        # pnpm
 
-        sonarlint-ls
+        # sonarlint-ls
       ]);
       profiles.default.enableUpdateCheck = false;
       profiles.default.enableExtensionUpdateCheck = false;
@@ -124,9 +124,8 @@
         tamasfe.even-better-toml
         charliermarsh.ruff
         datakurre.devenv
-        xabikos.JavaScriptSnippets
-        christian-kohler.npm-intellisense
-        SonarSource.sonarlint-vscode
+        # xabikos.JavaScriptSnippets
+        # SonarSource.sonarlint-vscode
       ]);
       profiles.default.userSettings = {
         # Add user settings here as key-value pairs
