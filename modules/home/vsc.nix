@@ -56,12 +56,15 @@
 
         yaml-language-server
         
+        kotlin
         kotlin-language-server
 
+        ansible
         ansible-language-server
 
         tailwindcss-language-server
 
+        terraform
         terraform-ls
 
         glsl_analyzer
@@ -72,6 +75,7 @@
 
         nasm
 
+        wrangler
       ]);
       profiles.default.enableUpdateCheck = false;
       profiles.default.enableExtensionUpdateCheck = false;
@@ -104,6 +108,8 @@
         editorconfig.editorconfig
         dbaeumer.vscode-eslint
         ms-vscode.js-debug
+        redhat.vscode-yaml
+        mathiasfrohlich.kotlin
       ]) ++ (with ovsxFixed.open-vsx; [
         nromanov.dotrush
         rust-lang.rust-analyzer
