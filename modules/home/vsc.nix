@@ -38,7 +38,7 @@
         ghc
         cabal-install
 
-        texlive.combined.scheme-full
+        texliveFull
 
         jdk21
         maven
@@ -128,7 +128,7 @@
         # SonarSource.sonarlint-vscode
       ]);
       profiles.default.userSettings = {
-        # Add user settings here as key-value pairs
+        "editor.minimap.enabled" = false;
       };
     };
   };
