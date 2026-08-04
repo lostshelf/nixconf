@@ -107,6 +107,7 @@
       startAgent = true;
       enableAskPassword = true;
       askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
+      extraConfig = "AddKeysToAgent yes";
     };
 
     programs.fish.enable = true;

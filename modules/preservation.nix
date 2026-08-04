@@ -55,6 +55,7 @@
             ".config/mozilla/firefox/mkdvt6af.default/extensions"
             ".config/mozilla/firefox/mkdvt6af.default/sessionstore-backups"
             ".config/mozilla/firefox/mkdvt6af.default/weave"
+            ".config/mozilla/firefox/Profile Groups"
 
             ".config/VSCodium/User/snippets"
             ".config/VSCodium/User/globalStorage"
