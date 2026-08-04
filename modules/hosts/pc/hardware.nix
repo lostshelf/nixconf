@@ -38,15 +38,17 @@
     # Don't show bootloader at startup
     boot.loader.timeout = 0;
 
+    # Use lanzaboote instead of systemd for secure boot
     boot.lanzaboote = {
       enable = true;
       pkiBundle = "/var/lib/sbctl";
     };
 
+    # Plymouth hides verbose text and shows a normal loading screen
     boot.plymouth.enable = true;
     boot.plymouth.theme = "breeze";
 
-    # Performance optimization options
+    # Performance optimizations
     boot.kernel.sysctl = {
       "vm.vfs_cache_pressure" = 50;
       "vm.swappiness" = 10;
