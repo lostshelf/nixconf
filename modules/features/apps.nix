@@ -54,7 +54,7 @@
       "com.vysp3r.ProtonPlus"
     ];
 
-    preservation.preserveAt."/persistent".users.hadif = {p
+    preservation.preserveAt."/persistent".users.hadif = {
       directories = [
         ".config/vesktop/settings"
         ".config/vesktop/themes"
