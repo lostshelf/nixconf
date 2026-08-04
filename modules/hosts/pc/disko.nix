@@ -5,17 +5,23 @@
     fileSystems."/nix".neededForBoot = true;
     fileSystems."/persistent".neededForBoot = true;
 
+    # filesystem for a temporary root
     disko.devices.nodev = {
       "/" = {
         fsType = "tmpfs";
         mountOptions = [
+          # Initially use 25% of RAM
           "size=25%"
+
+          # Make it read-only
           "mode=755"
         ];
       };
     };
 
+    # Drive setup
     disko.devices.disk.main = {
+      # Refer to drives from `/dev/disk/by-id`
       device = "/dev/disk/by-id/nvme-WD_BLACK_SN850X_2000GB_24021W801007";
       type = "disk";
 
@@ -29,6 +35,7 @@
 
       content.partitions.esp = {
         name = "ESP";
+        # NixOS can require a lot of space, especially if you add a lot of modules to the initramfs
         size = "2G";
         type = "EF00";
 
@@ -39,6 +46,7 @@
         };
       };
 
+      # Swap partition optional. Only required for hibernation.
       content.partitions.swap = {
         size = "64G";
 
@@ -48,6 +56,7 @@
         };
       };
 
+      # Partition to store persisted files
       content.partitions.root = {
         name = "root";
         size = "100%";
@@ -71,6 +80,7 @@
       };
     };
 
+    # Basic storage drives
     disko.devices.disk."Storage1" = {
       device = "/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_with_Heatsink_4TB_S7DSNJ0Y502069A";
       type = "disk";
@@ -117,6 +127,7 @@
       };
     };
 
+      # Make storage drives owned by me
       systemd.tmpfiles.rules = [
         "d /mnt/Storage1 0755 hadif users - -"
         "d /mnt/Storage2 0755 hadif users - -"
