@@ -13,7 +13,6 @@
       self.nixosModules.homeConfig
 
       self.nixosModules.kdeConfig
-      self.nixosModules.devConfig
 
       self.nixosModules.gaming
       self.nixosModules.apps
