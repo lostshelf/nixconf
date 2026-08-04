@@ -12,4 +12,5 @@
       inputs.nix-vscode-extensions.overlays.default
     ];
   };
+  nix.settings.auto-optimise-store = true;
 }
