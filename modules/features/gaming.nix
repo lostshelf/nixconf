@@ -58,7 +58,7 @@
       eden
       tkmm
       balatro-mod-manager
-      kmines
+      kdePackages.kmines
     ];
 
     # Add `PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/wivrn/comp_ipc %command%` to launch options of VR game
