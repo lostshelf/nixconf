@@ -129,6 +129,7 @@
       ]);
       profiles.default.userSettings = {
         "editor.minimap.enabled" = false;
+        "explorer.confirmDelete" = false;
       };
     };
   };
