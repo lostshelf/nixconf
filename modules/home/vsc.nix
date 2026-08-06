@@ -64,8 +64,8 @@
 
         # tailwindcss-language-server
 
-        terraform
-        terraform-ls
+        # terraform
+        # terraform-ls
 
         glsl_analyzer
 
