@@ -496,6 +496,9 @@
         kwinrc."Tiling/420a101d-850e-4ffe-a803-d9626fd2bd52/1224cbd2-a4c5-4902-b5e0-8fa2f749af0d".tiles = "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
         kwinrc."Tiling/420a101d-850e-4ffe-a803-d9626fd2bd52/ab60c9f3-bfba-4558-8384-dc53c664dccf".padding = 4;
         kwinrc."Tiling/420a101d-850e-4ffe-a803-d9626fd2bd52/ab60c9f3-bfba-4558-8384-dc53c664dccf".tiles = "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
+        kwinrc."Tiling/420a101d-850e-4ffe-a803-d9626fd2bd52/85803a11-71d4-4cd1-81b3-1b99c2bdb121".padding = 4;
+        kwinrc."Tiling/420a101d-850e-4ffe-a803-d9626fd2bd52/85803a11-71d4-4cd1-81b3-1b99c2bdb121".tiles = "{\"layoutDirection\":\"vertical\",\"tiles\":[{\"height\":0.475},{\"height\":0.525}]}"
+;
         kwinrc.Xwayland.Scale = 1.45;
         kwinrulesrc.General.rules = "";
         plasma-localerc.Formats.LANG = "en_US.UTF-8";
