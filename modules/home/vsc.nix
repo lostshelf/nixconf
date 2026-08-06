@@ -56,28 +56,28 @@
 
         # yaml-language-server
         
-        # kotlin
-        # kotlin-language-server
+        kotlin
+        kotlin-language-server
 
-        # ansible
-        # ansible-language-server
+        ansible
+        ansible-language-server
 
         # tailwindcss-language-server
 
-        # terraform
-        # terraform-ls
+        terraform
+        terraform-ls
 
-        # glsl_analyzer
+        glsl_analyzer
 
         # systemd-language-server
 
-        # asm-lsp
+        asm-lsp
 
-        # nasm
+        nasm
 
-        # wrangler
+        wrangler
 
-        # pnpm
+        pnpm
 
         # sonarlint-ls
       ]);
