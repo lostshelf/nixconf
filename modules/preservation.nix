@@ -72,6 +72,7 @@
             ".local/share/fish/fish_variables"
 
             ".config/mozilla/firefox/profiles.ini"
+            ".config/mozilla/firefox/installs.ini"
             ".config/mozilla/firefox/mkdvt6af.default/places.sqlite"
             ".config/mozilla/firefox/mkdvt6af.default/places.sqlite-wal"
             ".config/mozilla/firefox/mkdvt6af.default/places.sqlite-shm"
