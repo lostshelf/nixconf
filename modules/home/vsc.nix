@@ -59,8 +59,8 @@
         kotlin
         kotlin-language-server
 
-        ansible
-        ansible-language-server
+        # ansible
+        # ansible-language-server
 
         # tailwindcss-language-server
 
