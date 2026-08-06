@@ -53,6 +53,7 @@
             ".local/share/flatpak"
 
             ".config/mozilla/firefox/mkdvt6af.default/extensions"
+            ".config/mozilla/firefox/mkdvt6af.default/storage"
             ".config/mozilla/firefox/mkdvt6af.default/sessionstore-backups"
             ".config/mozilla/firefox/mkdvt6af.default/weave"
             ".config/mozilla/firefox/Profile Groups"
@@ -112,8 +113,7 @@
             ".config/mozilla/firefox/mkdvt6af.default/protections.sqlite"
             ".config/mozilla/firefox/mkdvt6af.default/compatibility.ini"
             ".config/mozilla/firefox/mkdvt6af.default/times.json"
-
-            ".config/VSCodium/User/chatLanguageModels.json"
+            ".config/mozilla/firefox/mkdvt6af.default/prefs.js"
           ];
         };
       };
