@@ -208,7 +208,7 @@
         }
       ];
 
-      configFile.kwinrc."Effect-MouseMark" = {
+      configFile.kwinrc."Effect-mousemark" = {
         "LineWidth" = 3;
         "Color" = "128,128,255";
 
