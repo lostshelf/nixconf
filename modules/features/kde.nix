@@ -115,6 +115,12 @@
       kamera
     ]);
 
+    preservation.preserveAt."/persistent" = {
+      directories = [
+        "/var/lib/plasmalogin"
+      ];
+    }
+
     preservation.preserveAt."/persistent".users.hadif = {
       directories = [
         ".config/kate"
