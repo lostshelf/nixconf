@@ -46,6 +46,7 @@
       haruna
       rsibreak
       kdiskmark
+      drawy
     ]) ++ (with pkgs.kdePackages; [
       kwave
       dolphin-plugins
