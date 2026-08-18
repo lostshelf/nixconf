@@ -116,6 +116,11 @@
       kamera
     ]);
 
+    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+      plasma-discover
+    ];
+
+
     preservation.preserveAt."/persistent" = {
       directories = [
         "/var/lib/plasmalogin"
