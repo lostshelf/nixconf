@@ -23,7 +23,7 @@
       texliveFull
       texstudio
 
-      libreoffice-qt-fresh
+      libreoffice-qt
       wpsoffice
       onlyoffice-desktopeditors
 

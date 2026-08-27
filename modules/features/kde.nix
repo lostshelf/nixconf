@@ -61,7 +61,8 @@
       kwallet-pam
       flatpak-kcm
       kde-gtk-config
-      wacomtablet
+      # Causing compile issues
+      # wacomtablet
       ark
       audiocd-kio
       kdenetwork-filesharing
