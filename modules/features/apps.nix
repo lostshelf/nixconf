@@ -54,6 +54,8 @@
       "com.vysp3r.ProtonPlus"
     ];
 
+    virtualisation.waydroid.enable = true;
+
     preservation.preserveAt."/persistent".users.hadif = {
       directories = [
         ".config/vesktop/settings"
