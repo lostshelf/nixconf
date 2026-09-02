@@ -89,6 +89,9 @@
         ".var/app/com.vysp3r.ProtonPlus/data"
 
         ".local/BraveSoftware"
+
+        ".config/Proton"
+        ".config/Proton Pass"
       ];
 
       files = [
