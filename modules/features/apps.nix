@@ -47,6 +47,8 @@
       quickemu
 
       openrgb
+
+      brave
     ];
 
     services.flatpak.packages = [
@@ -85,6 +87,8 @@
         ".var/app/org.vinegarhq.Sober/data"
         ".var/app/com.vysp3r.ProtonPlus/config"
         ".var/app/com.vysp3r.ProtonPlus/data"
+
+        ".local/BraveSoftware"
       ];
 
       files = [
