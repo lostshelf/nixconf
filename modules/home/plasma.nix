@@ -96,7 +96,7 @@
             {
               iconTasks = {
                 launchers = [
-                  "applications:com.brave.Browser.desktop"
+                  "applications:brave-browser.desktop"
                   "applications:discord-canary.desktop"
                   "applications:vesktop.desktop"
                   "applications:org.kde.dolphin.desktop"
