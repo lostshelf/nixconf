@@ -90,6 +90,10 @@
         ".steam"
         ".cache/nv_shader_cache"
       ];
+
+      files = [
+        ".config/OpenRCT2/config.ini"
+      ];
     };
   };
 }
