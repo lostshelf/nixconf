@@ -88,6 +88,7 @@
         ".var/app/com.vysp3r.ProtonPlus/config"
         ".var/app/com.vysp3r.ProtonPlus/data"
 
+        ".config/BraveSoftware/Brave-Browser"
         ".local/BraveSoftware"
 
         ".config/Proton"

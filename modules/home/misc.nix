@@ -5,11 +5,11 @@
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {
-        "text/html" = "firefox.desktop";
-        "x-scheme-handler/http" = "firefox.desktop";
-        "x-scheme-handler/https" = "firefox.desktop";
-        "x-scheme-handler/about" = "firefox.desktop";
-        "x-scheme-handler/unknown" = "firefox.desktop";
+        "text/html" = "com.brave.Browser.desktop";
+        "x-scheme-handler/http" = "com.brave.Browser.desktop";
+        "x-scheme-handler/https" = "com.brave.Browser.desktop";
+        "x-scheme-handler/about" = "com.brave.Browser.desktop";
+        "x-scheme-handler/unknown" = "com.brave.Browser.desktop";
       };
     };
   };
