@@ -223,6 +223,8 @@
         "Arrowdrawshift"   = false;
       };
 
+      configFile."kwinrc"."TabBox"."MultiScreenMode" = true;
+
       shortcuts = {
         "services/plasma-manager-commands.desktop" = {
           clipShort = "Ctrl+`";
