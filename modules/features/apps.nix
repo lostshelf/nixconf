@@ -51,6 +51,8 @@
       brave
     ];
 
+    services.tailscale.enable = true;
+
     services.flatpak.packages = [
       "org.vinegarhq.Sober"
       "com.vysp3r.ProtonPlus"
